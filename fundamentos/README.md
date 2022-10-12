@@ -10,6 +10,7 @@ Seção-1.Unix & Bash:
     - Kernel
     - Shell
     - Comandos e funcionalidades
+    - Poder do terminal
 
 Seção-2.Git & GitHub
     - Versionamento

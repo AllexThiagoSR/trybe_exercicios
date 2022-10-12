@@ -1,0 +1,19 @@
+## Fundamentos
+
+#### Para que serve este módulo?
+
+Neste módulo será constuída a base para o desenvolvimento web, serão construídos os primeiros conhecimentos sobre: JavaScript, HTML e CSS, e o que será necessário sobre o terminal baseado em Unix e conhecimentos sobre Git e GitHub(além das soft skills que serão desenvolvidas juntamente).
+
+#### Conhecimentos
+
+Seção-1.Unix & Bash:
+    - Kernel
+    - Shell
+    - Comandos e funcionalidades
+    - Poder do terminal
+
+Seção-2.Git & GitHub
+    - Versionamento
+    - Comandos git
+    - Repositório remoto
+    - Boas práticas de git

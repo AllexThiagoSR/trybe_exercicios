@@ -17,13 +17,17 @@
 .browser {
     width: 250px;
     position: absolute;
-    left: 300px;
+    left: 267px;
+    top: 85px;
 }
 
 .speach {
     font-size: 25px;
+    width: 280px;
     position: absolute;
     z-index: 2;
+    left: 10px;
+    top: 40px;
 }
 
 .balun {
@@ -32,10 +36,7 @@
 }
 
 .speaks {
-    height: 141.5px;
-    width: 100px;
-    background-color: blueviolet;
     position: absolute;
-    top: 300px;
+    top: 120px;
     left: 300px
 }

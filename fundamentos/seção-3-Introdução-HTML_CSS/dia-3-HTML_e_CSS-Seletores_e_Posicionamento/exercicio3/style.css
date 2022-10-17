@@ -14,3 +14,7 @@ a {
     color: black;
     text-decoration: none;
 }
+
+ol, ul {
+    list-style: none;
+}

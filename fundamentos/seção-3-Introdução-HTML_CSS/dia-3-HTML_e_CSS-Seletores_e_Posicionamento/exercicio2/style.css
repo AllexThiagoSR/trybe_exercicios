@@ -1,13 +1,16 @@
 .mario {
     width: 150px;
+    display: block;
 }
 
 .gumba {
     width: 100px;
+    margin-left: 30px;
+    display: block;
 }
 
 .browser {
-    width: 200px;
+    width: 250px;
 }
 
 .speach {

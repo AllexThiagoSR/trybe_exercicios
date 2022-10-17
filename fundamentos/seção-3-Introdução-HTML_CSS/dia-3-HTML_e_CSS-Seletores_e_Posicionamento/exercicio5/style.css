@@ -1,0 +1,12 @@
+.bg-yellow {
+    background-color: yellow;
+    margin: 5px;
+}
+
+ol li:nth-of-type(even) {
+    color: green;
+}
+
+ol li:nth-of-type(odd){
+    text-transform: uppercase;
+}

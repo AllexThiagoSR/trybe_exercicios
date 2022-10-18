@@ -1,4 +1,4 @@
-.bg-yellow {
+ol li{
     background-color: yellow;
     margin: 5px;
 }
@@ -11,11 +11,11 @@ ol li:nth-of-type(odd){
     text-transform: uppercase;
 }
 
-.bg-red {
+.text-red {
     color: red;
 }
 
-.bg-red em {
+.text-red em {
     font-size: 40px;
     border: 1px solid black;
 }
@@ -28,26 +28,38 @@ li em {
     font-weight: bold;
 }
 
-.lang-prog-list li:nth-of-type(1), ul li:nth-of-type(2), ul li:nth-of-type(3){
+.lang-prog-list li:nth-of-type(-n+3){
     color: blue;
 }
 
-.ally-list li:nth-of-type(1):hover {
-    background-color: orange;
+.ally-list li a{
+    text-decoration: none;
 }
 
-.ally-list li:nth-of-type(2):hover {
-    background-color: green;
+.ally-list li a:hover {
+    font-weight: bold;
 }
 
-.ally-list li:nth-of-type(3):hover {
-    background-color: black;
+.ally-list li a[href="https://pt.stackoverflow.com/"]:hover {
+    color: orange;
 }
 
-.ally-list li:nth-of-type(4):hover {
-    background-color: yellow;
+.ally-list li a[href="https://www.w3schools.com/"]:hover {
+    color: green;
 }
 
-.ally-list li:nth-of-type(5):hover {
-    background-color: green;
+.ally-list a[href="https://developer.mozilla.org/pt-BR/"]:hover{
+    color: black;
+}
+
+.ally-list li a[href="https://devdocs.io/"]:hover {
+    color: yellow;
+}
+
+.ally-list li a[href="https://app.trybe.com/"]:hover {
+    color: green;
+}
+
+.bg-pink {
+    background-color: pink;
 }

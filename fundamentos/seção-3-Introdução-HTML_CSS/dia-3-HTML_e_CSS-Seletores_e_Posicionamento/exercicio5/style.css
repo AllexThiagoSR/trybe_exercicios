@@ -27,3 +27,27 @@ li {
 li em {
     font-weight: bold;
 }
+
+.lang-prog-list li:nth-of-type(1), ul li:nth-of-type(2), ul li:nth-of-type(3){
+    color: blue;
+}
+
+.ally-list li:nth-of-type(1):hover {
+    background-color: orange;
+}
+
+.ally-list li:nth-of-type(2):hover {
+    background-color: green;
+}
+
+.ally-list li:nth-of-type(3):hover {
+    background-color: black;
+}
+
+.ally-list li:nth-of-type(4):hover {
+    background-color: yellow;
+}
+
+.ally-list li:nth-of-type(5):hover {
+    background-color: green;
+}

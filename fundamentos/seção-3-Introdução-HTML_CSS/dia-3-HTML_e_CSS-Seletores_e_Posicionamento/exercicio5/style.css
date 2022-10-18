@@ -40,23 +40,23 @@ li em {
     font-weight: bold;
 }
 
-.ally-list li a[href="https://pt.stackoverflow.com/"]:hover {
+.ally-list li a[href*="stackoverflow"]:hover {
     color: orange;
 }
 
-.ally-list li a[href="https://www.w3schools.com/"]:hover {
+.ally-list li a[href*="w3schools"]:hover {
     color: green;
 }
 
-.ally-list a[href="https://developer.mozilla.org/pt-BR/"]:hover{
+.ally-list a[href*="mozilla"]:hover{
     color: black;
 }
 
-.ally-list li a[href="https://devdocs.io/"]:hover {
+.ally-list li a[href*="devdocs"]:hover {
     color: yellow;
 }
 
-.ally-list li a[href="https://app.betrybe.com/"]:hover {
+.ally-list li a[href*="trybe"]:hover {
     color: green;
 }
 
@@ -64,6 +64,10 @@ li em {
     background-color: pink;
 } */
 
-li[id="java"], li[id="java-script"]{
+/* li[id="java"], li[id="java-script"]{
+    background-color: pink;
+} */
+
+.lang-prog-list li[id*="java"]{
     background-color: pink;
 }

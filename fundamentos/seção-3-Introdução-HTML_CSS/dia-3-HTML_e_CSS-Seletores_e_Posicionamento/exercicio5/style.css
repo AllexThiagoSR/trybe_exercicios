@@ -1,0 +1,65 @@
+ol li{
+    background-color: yellow;
+    margin: 5px;
+}
+
+ol li:nth-of-type(even) {
+    color: green;
+}
+
+ol li:nth-of-type(odd){
+    text-transform: uppercase;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-red em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+.lang-prog-list li:nth-of-type(-n+3){
+    color: blue;
+}
+
+.ally-list li a{
+    text-decoration: none;
+}
+
+.ally-list li a:hover {
+    font-weight: bold;
+}
+
+.ally-list li a[href="https://pt.stackoverflow.com/"]:hover {
+    color: orange;
+}
+
+.ally-list li a[href="https://www.w3schools.com/"]:hover {
+    color: green;
+}
+
+.ally-list a[href="https://developer.mozilla.org/pt-BR/"]:hover{
+    color: black;
+}
+
+.ally-list li a[href="https://devdocs.io/"]:hover {
+    color: yellow;
+}
+
+.ally-list li a[href="https://app.trybe.com/"]:hover {
+    color: green;
+}
+
+.bg-pink {
+    background-color: pink;
+}

@@ -8,6 +8,7 @@ h1 {
     height: 50px;
     width: 200px;
     display: inline-block;
+    text-align: center;
 }
 
 .second {
@@ -16,6 +17,7 @@ h1 {
     height: 50px;
     width: 300px;
     display: inline-block;
+    text-align: center;
 }
 
 .third {
@@ -24,6 +26,7 @@ h1 {
     height: 50px;
     width: 300px;
     display: inline-block;
+    text-align: center;
 }
 
 .sec_1 ul{

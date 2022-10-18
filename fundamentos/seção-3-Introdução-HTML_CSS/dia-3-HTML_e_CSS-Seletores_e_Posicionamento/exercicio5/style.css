@@ -60,6 +60,10 @@ li em {
     color: green;
 }
 
-.bg-pink {
+/* .bg-pink {
+    background-color: pink;
+} */
+
+li[id="java"], li[id="java-script"]{
     background-color: pink;
 }

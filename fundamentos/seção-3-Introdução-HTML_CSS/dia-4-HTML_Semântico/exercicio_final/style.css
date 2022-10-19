@@ -48,6 +48,7 @@ header h1 {
 /* Inicio estilização article */
 #article-1 {
     margin-top: 50px;
+    font-size: 20px;
 }
 
 article h2{
@@ -56,14 +57,17 @@ article h2{
 
 #general-facts {
     padding: 40px;
-    height: 500px;
+    height: auto;
+    margin-bottom: 70px;
 }
 
 #general-facts .inf {
     text-align: justify;
     padding: 40px;
     display: inline-block;
+    width: 600px;
     margin-top: 0;
+    
 }
 
 #general-facts div {
@@ -71,20 +75,29 @@ article h2{
     width: 700px;
 }
 
-#general-facts img{
-    left: px;
+#general-facts aside{
     float: right;
+}
+
+table{
+    display: block;
+    margin-left: 100px;
+    border-collapse: collapse;
 }
 
 thead, tbody{
     display: inline-block;
+    font-size: px;
+    width: 296px;
 }
 
-table thead tr{
+tr{
     display: inline-grid;
+    text-align: left;
 }
 
-table tbody tr{
-    display: inline-grid;
-    left: 150px;
+th, td{
+    border: 1px solid black;
+    padding: 6px;
+    width: 287px;
 }

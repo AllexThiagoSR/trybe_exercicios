@@ -75,3 +75,16 @@ article h2{
     left: px;
     float: right;
 }
+
+thead, tbody{
+    display: inline-block;
+}
+
+table thead tr{
+    display: inline-grid;
+}
+
+table tbody tr{
+    display: inline-grid;
+    left: 150px;
+}

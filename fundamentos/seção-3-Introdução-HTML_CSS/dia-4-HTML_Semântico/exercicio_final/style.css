@@ -18,26 +18,17 @@ header h1 {
     margin-bottom: 40px;
 }
 
-#navigation li{
-    list-style: none;
+#navigation .anchor-nav{
     display: inline-block;
+    text-decoration: none;
     text-align: center;
     width: 200px;
     margin-right: 160px;
-}
-
-#navigation li:nth-of-type(3){
-    margin-right: 0;
-}
-
-.anchor-nav {
-    text-align: center;
-    width: 200px;
-    display: inline-block;
-    font-size: 18px;
-    text-decoration: none;
     color: black;
+}
 
+#navigation .anchor-nav:nth-of-type(3){
+    margin-right: 0;
 }
 
 .anchor-nav:hover {
@@ -64,7 +55,6 @@ article h2{
 #general-facts .inf {
     text-align: justify;
     padding: 40px;
-    display: inline-block;
     width: 600px;
     margin-top: 0;
     
@@ -72,11 +62,12 @@ article h2{
 
 #general-facts div {
     display: inline-block;
-    width: 700px;
+    width: 70%;
 }
 
 #general-facts aside{
-    float: right;
+    display: inline-block;
+    width: 28%;
 }
 
 table{
@@ -87,7 +78,6 @@ table{
 
 thead, tbody{
     display: inline-block;
-    font-size: px;
     width: 296px;
 }
 

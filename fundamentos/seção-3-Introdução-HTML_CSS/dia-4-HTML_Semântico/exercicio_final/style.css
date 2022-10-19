@@ -1,3 +1,8 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
 body {
     background-color: #edadad;
 }
@@ -62,12 +67,15 @@ article h2{
 
 #general-facts div {
     display: inline-block;
-    width: 70%;
+    width: 65%;
+    border-right: 1px solid gray;
+    padding-right: 3%;
 }
 
 #general-facts aside{
+    margin-left: 30px;
     display: inline-block;
-    width: 28%;
+    width: 25%;
 }
 
 table{
@@ -90,4 +98,9 @@ th, td{
     border: 1px solid black;
     padding: 6px;
     width: 287px;
+}
+
+th {
+    background-color: #be75e5;
+    font-weight: bold;
 }

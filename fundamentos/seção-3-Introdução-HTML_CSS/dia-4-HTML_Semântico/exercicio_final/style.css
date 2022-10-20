@@ -104,3 +104,22 @@ th {
     background-color: #be75e5;
     font-weight: bold;
 }
+
+#vision-sec div{
+    padding: 40px;
+    margin-left: 60px;
+    width: 50%;
+}
+
+#vision {
+    padding: 40px;
+}
+
+.paragraphs {
+    text-align: justify;
+}
+
+#mantis-canvas {
+    width: 500px;
+    height: 500px;
+}

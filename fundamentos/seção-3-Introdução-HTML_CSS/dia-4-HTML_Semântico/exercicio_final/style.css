@@ -119,7 +119,10 @@ th {
     text-align: justify;
 }
 
-#mantis-canvas {
-    width: 500px;
-    height: 500px;
+#mantis-canvas p {
+    text-align: center;
+}
+
+#mantis-canvas img{
+    margin-left: 45px;
 }

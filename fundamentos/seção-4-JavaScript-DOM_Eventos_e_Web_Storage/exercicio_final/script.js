@@ -26,10 +26,9 @@ function changeBgColor(color, id=null, cssSelector=null){
 
   if(id !== null){
     element = document.getElementById(id);
-    element.style.backgroundColor = color;
+    
   }else if(cssSelector !== null){
     element = document.querySelector(cssSelector);
-    element.style.backgroundColor = color;
   } else if(id !== null && cssSelector !== null){
     console.log('Mande apenas um dos argumentos opicionais, id ou ');
     return null;
@@ -37,8 +36,23 @@ function changeBgColor(color, id=null, cssSelector=null){
     console.log('Mande um dos argumentos opicionais, id ou clas');
     return null;
   }
+  element.style.backgroundColor = color;
+}
 
-  
+function changeToUpper(id=null, cssSelector=null){
+  let element;
+  if(id !== null){
+    element = document.getElementById(id);
+  }else if(cssSelector !== null){
+    element = document.querySelector(cssSelector);
+  } else if(id !== null && cssSelector !== null){
+    console.log('Mande apenas um dos argumentos opicionais, id ou cssSelector');
+    return null;
+  }else{
+    console.log('Mande um dos argumentos opicionais, id ou cssSelector');
+    return null;
+  }
+  element.style.textTransform = 'uppercase';
 }
 
 
@@ -46,3 +60,5 @@ changeTagText('p', '-----', 'Me vejo empregado e vivendo bem');
 changeBgColor('rgb(76,164,109)', null, '.main-content');
 changeBgColor('white', null, '.main-content .center-content')
 changeTagText('h1', 'Exercício - JavaEscripito', 'Exercício - JavaScript')
+changeToUpper(null, 'p');
+

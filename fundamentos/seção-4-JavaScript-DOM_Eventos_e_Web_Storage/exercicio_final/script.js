@@ -55,10 +55,18 @@ function changeToUpper(id=null, cssSelector=null){
   element.style.textTransform = 'uppercase';
 }
 
+function showPContent(){
+  let element = document.getElementsByTagName('p');
+
+  for(let i of element){
+    console.log(i.innerText);
+  }
+}
+
 
 changeTagText('p', '-----', 'Me vejo empregado e vivendo bem');
 changeBgColor('rgb(76,164,109)', null, '.main-content');
 changeBgColor('white', null, '.main-content .center-content')
 changeTagText('h1', 'Exercício - JavaEscripito', 'Exercício - JavaScript')
 changeToUpper(null, 'p');
-
+showPContent();

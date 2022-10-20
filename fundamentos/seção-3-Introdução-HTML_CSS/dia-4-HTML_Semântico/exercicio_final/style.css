@@ -1,0 +1,181 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    background-color: #edadad;
+}
+/* Inicio estilização header */
+header {
+    border-bottom: 2px solid black;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+#navigation {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#navigation .anchor-nav{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    width: 200px;
+    margin-right: 160px;
+    color: black;
+}
+
+#navigation .anchor-nav:nth-of-type(3){
+    margin-right: 0;
+}
+
+.anchor-nav:hover {
+    font-size: 20px;
+}
+/* Fim estilização header */
+
+/* Inicio estilização article */
+#article-1 {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+article h2{
+    font-size: 1.95em;
+}
+
+#general-facts {
+    padding: 40px;
+    height: auto;
+    margin-bottom: 70px;
+}
+
+#general-facts .inf {
+    text-align: justify;
+    padding: 40px;
+    width: 600px;
+    margin-top: 0;
+    
+}
+
+#general-facts div {
+    display: inline-block;
+    padding-right: 3%;
+}
+
+#general-facts img {
+    padding: 50px;
+    margin-left: 100px;
+}
+
+table{
+    display: block;
+    margin-left: 100px;
+    border-collapse: collapse;
+}
+
+thead, tbody{
+    display: inline-block;
+    width: 296px;
+}
+
+tr{
+    display: inline-grid;
+    text-align: left;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 6px;
+    width: 287px;
+}
+
+th {
+    background-color: #be75e5;
+    font-weight: bold;
+}
+
+.text_form{
+    padding: 40px;
+    margin-left: 60px;
+    width: 50%;
+}
+
+#vision, #attack-defense, #impatient, #bib-ref {
+    padding: 40px;
+}
+
+.paragraphs {
+    text-align: justify;
+}
+
+#mantis-canvas p {
+    text-align: center;
+    width: 555px;
+    margin-left: 73px;
+}
+
+#mantis-canvas img{
+    margin-left: 100px;
+}
+
+#mantis-better-balboa {
+    position: relative;
+    width: 800px;
+    height: 200px;
+}
+
+#mantis-better-balboa img:nth-of-type(2){
+    padding: 40px;
+}
+
+#mantis {
+    width: 300px;
+}
+
+#better-than {
+    width: 100px;
+}
+
+#balboa {
+    width: 300px;
+    padding-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+h3 {
+    border-bottom: 1px solid black;
+}
+main {
+    width: 70%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-right: 1px solid gray;
+    display: inline-block;
+}
+
+aside {
+    width: 25%;
+    display: inline-block;
+    padding-left: 40px;
+    top: 300px;
+    height: 4720px;;
+    position: absolute;
+}
+
+aside div {
+    position: sticky;
+    top: 100px;
+    bottom: 100px;
+}

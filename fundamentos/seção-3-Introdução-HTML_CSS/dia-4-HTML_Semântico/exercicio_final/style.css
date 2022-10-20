@@ -105,13 +105,13 @@ th {
     font-weight: bold;
 }
 
-#vision-sec div{
+.text_form{
     padding: 40px;
     margin-left: 60px;
     width: 50%;
 }
 
-#vision {
+#vision, #attack-defense {
     padding: 40px;
 }
 
@@ -125,4 +125,31 @@ th {
 
 #mantis-canvas img{
     margin-left: 45px;
+}
+
+#mantis-better-balboa {
+    position: relative;
+    width: 800px;
+    height: 200px;
+    margin-left: 150px;
+}
+
+#mantis-better-balboa img{
+    position:absolute
+}
+
+#mantis {
+    width: 300px;
+}
+
+#better-than {
+    left: 350px;
+    top: 50px;
+    width: 100px;
+}
+
+#balboa {
+    width: 300px;
+    left: 500px;
+    top: 10px;
 }

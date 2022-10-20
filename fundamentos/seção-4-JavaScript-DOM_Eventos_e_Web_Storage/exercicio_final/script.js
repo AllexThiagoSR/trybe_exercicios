@@ -10,3 +10,15 @@
       5. Crie e execute uma função que modifique o texto da primeira tag <p> para maiúsculo.
       6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
       */
+
+function changeParagraph(text, yourText){
+  const pElement = document.getElementsByTagName('p');
+
+  for(let i of pElement){
+    if(i.innerText === text){
+      i.innerText = yourText;
+    }
+  }
+}
+
+changeParagraph('-----', 'Me vejo empregado e vivendo bem');

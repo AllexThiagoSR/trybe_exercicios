@@ -24,7 +24,6 @@ function changeTagText(tag, text, yourText){
 function changeBgColor(color, id=null, cssSelector=null){
   let element;
 
-  console.log(color + ' ' + id + ' ' + cssSelector)
   if(id !== null){
     element = document.getElementById(id);
     element.style.backgroundColor = color;
@@ -46,3 +45,4 @@ function changeBgColor(color, id=null, cssSelector=null){
 changeTagText('p', '-----', 'Me vejo empregado e vivendo bem');
 changeBgColor('rgb(76,164,109)', null, '.main-content');
 changeBgColor('white', null, '.main-content .center-content')
+changeTagText('h1', 'Exercício - JavaEscripito', 'Exercício - JavaScript')

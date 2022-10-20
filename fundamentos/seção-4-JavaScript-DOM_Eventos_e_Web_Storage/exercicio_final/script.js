@@ -11,14 +11,37 @@
       6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
       */
 
-function changeParagraph(text, yourText){
-  const pElement = document.getElementsByTagName('p');
+function changeTagText(tag, text, yourText){
+  const element = document.getElementsByTagName(tag);
 
-  for(let i of pElement){
+  for(let i of element){
     if(i.innerText === text){
       i.innerText = yourText;
     }
   }
 }
 
-changeParagraph('-----', 'Me vejo empregado e vivendo bem');
+function changeBgColor(color, id=null, clas=null){
+  let element;
+
+  console.log(color + ' ' + id + ' ' + clas)
+  if(id !== null){
+    element = document.getElementById(id);
+    element.style.backgroundColor = color;
+  }else if(clas !== null){
+    element = document.querySelector('.' + clas);
+    element.style.backgroundColor = color;
+  } else if(id !== null && clas !== null){
+    console.log('Mande apenas um dos argumentos opicionais, id ou clas');
+    return null;
+  }else{
+    console.log('Mande um dos argumentos opicionais, id ou clas');
+    return null;
+  }
+
+  
+}
+
+
+changeTagText('p', '-----', 'Me vejo empregado e vivendo bem');
+changeBgColor('rgb(76,164,109)', null, 'main-content');

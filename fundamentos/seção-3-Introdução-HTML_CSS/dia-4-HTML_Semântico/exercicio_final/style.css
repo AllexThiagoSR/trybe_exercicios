@@ -121,10 +121,12 @@ th {
 
 #mantis-canvas p {
     text-align: center;
+    width: 555px;
+    margin-left: 73px;
 }
 
 #mantis-canvas img{
-    margin-left: 45px;
+    margin-left: 100px;
 }
 
 #mantis-better-balboa {
@@ -157,4 +159,8 @@ th {
 footer {
     text-align: center;
     border-top: 1px solid black;
+}
+
+h3 {
+    border-bottom: 1px solid black;
 }

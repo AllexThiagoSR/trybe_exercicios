@@ -1,6 +1,9 @@
 const he_cont = document.getElementById('header-container');
 const emer_cont = document.querySelectorAll('.emergency-tasks div');
 const no_emer = document.querySelectorAll('.no-emergency-tasks div');
+const foo_cont = document.getElementById('footer-container')
+
+he_cont.style.backgroundColor = '#4DCC35';
 
 for(let i = 0;i < emer_cont.length; i += 1){
 
@@ -25,4 +28,4 @@ for(let i = 0;i < emer_cont.length; i += 1){
     div_h3.querySelector('h3').style.left = '0';
 }
 
-he_cont.style.backgroundColor = '#4DCC35';
+foo_cont.style.backgroundColor = '#034422'; 

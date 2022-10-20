@@ -67,15 +67,12 @@ article h2{
 
 #general-facts div {
     display: inline-block;
-    width: 65%;
-    border-right: 1px solid gray;
     padding-right: 3%;
 }
 
-#general-facts aside{
-    margin-left: 30px;
-    display: inline-block;
-    width: 25%;
+#general-facts img {
+    padding: 50px;
+    margin-left: 100px;
 }
 
 table{
@@ -133,11 +130,10 @@ th {
     position: relative;
     width: 800px;
     height: 200px;
-    margin-left: 150px;
 }
 
-#mantis-better-balboa img{
-    position:absolute
+#mantis-better-balboa img:nth-of-type(2){
+    padding: 40px;
 }
 
 #mantis {
@@ -145,15 +141,12 @@ th {
 }
 
 #better-than {
-    left: 350px;
-    top: 50px;
     width: 100px;
 }
 
 #balboa {
     width: 300px;
-    left: 500px;
-    top: 10px;
+    padding-bottom: 10px;
 }
 
 footer {
@@ -163,4 +156,26 @@ footer {
 
 h3 {
     border-bottom: 1px solid black;
+}
+main {
+    width: 70%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-right: 1px solid gray;
+    display: inline-block;
+}
+
+aside {
+    width: 25%;
+    display: inline-block;
+    padding-left: 40px;
+    top: 300px;
+    height: 4720px;;
+    position: absolute;
+}
+
+aside div {
+    position: sticky;
+    top: 100px;
+    bottom: 100px;
 }

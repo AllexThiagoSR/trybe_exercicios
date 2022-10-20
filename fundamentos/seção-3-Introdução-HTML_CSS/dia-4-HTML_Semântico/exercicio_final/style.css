@@ -111,7 +111,7 @@ th {
     width: 50%;
 }
 
-#vision, #attack-defense, #impatient {
+#vision, #attack-defense, #impatient, #bib-ref {
     padding: 40px;
 }
 
@@ -152,4 +152,9 @@ th {
     width: 300px;
     left: 500px;
     top: 10px;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid black;
 }

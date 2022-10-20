@@ -21,18 +21,18 @@ function changeTagText(tag, text, yourText){
   }
 }
 
-function changeBgColor(color, id=null, clas=null){
+function changeBgColor(color, id=null, cssSelector=null){
   let element;
 
-  console.log(color + ' ' + id + ' ' + clas)
+  console.log(color + ' ' + id + ' ' + cssSelector)
   if(id !== null){
     element = document.getElementById(id);
     element.style.backgroundColor = color;
-  }else if(clas !== null){
-    element = document.querySelector('.' + clas);
+  }else if(cssSelector !== null){
+    element = document.querySelector(cssSelector);
     element.style.backgroundColor = color;
-  } else if(id !== null && clas !== null){
-    console.log('Mande apenas um dos argumentos opicionais, id ou clas');
+  } else if(id !== null && cssSelector !== null){
+    console.log('Mande apenas um dos argumentos opicionais, id ou ');
     return null;
   }else{
     console.log('Mande um dos argumentos opicionais, id ou clas');
@@ -44,4 +44,5 @@ function changeBgColor(color, id=null, clas=null){
 
 
 changeTagText('p', '-----', 'Me vejo empregado e vivendo bem');
-changeBgColor('rgb(76,164,109)', null, 'main-content');
+changeBgColor('rgb(76,164,109)', null, '.main-content');
+changeBgColor('white', null, '.main-content .center-content')

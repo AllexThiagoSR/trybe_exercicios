@@ -1,3 +1,4 @@
+//melhorar essa implementação depois
 function endWithThis(word, ending){
   if(word.length > ending.length){  
     return word.endsWith(ending);

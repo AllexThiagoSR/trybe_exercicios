@@ -1,5 +1,5 @@
 let moradores = {
-  blocoUm: [
+  'bloco 1': [
     {
       nome: 'Luiza',
       sobrenome: 'Guimarães',
@@ -13,7 +13,7 @@ let moradores = {
       apartamento: 502,
     },
   ],
-  blocoDois: [
+  'bloco 2': [
     {
       nome: 'Murilo',
       sobrenome: 'Ferraz',
@@ -29,4 +29,13 @@ let moradores = {
   ],
 };
 
-console.log(`O(A) morador(a) do bloco 2 ${moradores.blocoDois[moradores.blocoDois.length - 1].nome} ${moradores.blocoDois[moradores.blocoDois.length - 1].sobrenome} mora no ${moradores.blocoDois[moradores.blocoDois.length - 1].andar}º andar, apartamento ${moradores.blocoDois[moradores.blocoDois.length - 1].apartamento}`);
+console.log(`O(A) morador(a) do bloco 2 ${moradores['bloco 2'][moradores['bloco 2'].length - 1].nome} ${moradores['bloco 2'][moradores['bloco 2'].length - 1].sobrenome} mora no ${moradores['bloco 2'][moradores['bloco 2'].length - 1].andar}º andar, apartamento ${moradores['bloco 2'][moradores['bloco 2'].length - 1].apartamento}`);
+
+console.log('');
+for(let blockKey in moradores){
+  console.log(blockKey);
+  for(let moradorIndex in moradores[blockKey]){
+    console.log(`  ${Number(moradorIndex) + 1}º Morador: ${moradores[blockKey][moradorIndex].nome} ${moradores[blockKey][moradorIndex].sobrenome}`);
+  }
+  console.log('');
+}

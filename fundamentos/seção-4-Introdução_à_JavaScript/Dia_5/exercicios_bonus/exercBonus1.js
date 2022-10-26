@@ -11,4 +11,14 @@ const replaceX = name =>{
   return final;
 }
 
-console.log(replaceX('Allex'));
+const mySkills = str => {
+  const skills = ['JavaScript', 'HTML', 'CSS'];
+  let conc = `${str}
+Minhas três principais habilidades são:`;
+
+  for(let index in skills){
+    conc += `\n -${skills[index]}`
+  }
+  return conc;
+}
+console.log(mySkills(replaceX('Bebeto')));

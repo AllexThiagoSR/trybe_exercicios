@@ -40,23 +40,28 @@ function romano(string){
       if(concat === key){
         //Adiciona o valor correspondente ao conjunto identificado
         conjunt.push(conjunts[key]);
-        //Retira os conjuntos
+        //Retira uma ocorrência do conjunto indentificado da string
         restOfString = restOfString.replace(key, '');
+        //Para o segundo laço pois a occorrência já foi identificada e removida da string
         break;
       }
     }
   }
 
-  //Itera sobre os caracters do que restou da string após retirar todos os conjuntos
+  //Itera sobre os caracteres do que restou da string após retirar todos os conjuntos
   for(let stringIndex in restOfString){
-    //Itera sobre os
+    //Itera sobre o objeto que possui todos os algarismos romanos, mas não tem os possíveis conjuntos
     for(let key in algarisms){
+      //Checa se o caracter atual da string que restou é igual á chave do objeto algarisms atual
       if(restOfString[stringIndex] === key){
+        //Adiciona à variável conjunt o valor correspondente ao algarismo identificado
         conjunt.push(algarisms[key]);
+        //Para o segundo laço já que o algarismo já foi identificado
         break;
       }
     }
   }
+  //Retorna a soma dos valores na variável conjunt
   return sum(conjunt);
 }
 

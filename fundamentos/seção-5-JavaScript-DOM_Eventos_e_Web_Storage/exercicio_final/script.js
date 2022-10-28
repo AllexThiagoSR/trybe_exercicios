@@ -13,17 +13,17 @@ Aqui você vai modificar os elementos já existentes utilizando apenas as funç�
 */
 
 //Exercício 1
-const changeParagraph = (id='', text='') =>{
+const changeParagraph = (id = '', text = '') => {
   const centerParagraph = document.getElementById(id);
   centerParagraph.innerText = text;
 };
 
-changeParagraph('text-mod', 'Me vejo trabalhando, com uma vida tranquila e feliz');
+changeParagraph('text-mod2', 'Me vejo trabalhando, com uma vida tranquila e feliz');
 
 //Exercício 2
 const changeClassBackgroundColor = (classs, color) => {
   const classElements = document.getElementsByClassName(classs);
-  for(let elem of classElements){
+  for (let elem of classElements) {
     elem.style.backgroundColor = color;
   }
 };
@@ -42,3 +42,11 @@ const replaceText = (id, text1, text2) => {
 };
 
 replaceText('title-head', 'Escripito', 'Script');
+
+//Exercício 5
+const transformIdText = (id, transformation) => {
+
+  document.getElementById(id).style.textTransform = transformation;
+};
+
+transformIdText('text-mod1', 'uppercase');

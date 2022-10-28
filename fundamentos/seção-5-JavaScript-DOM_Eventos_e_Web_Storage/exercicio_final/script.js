@@ -29,3 +29,6 @@ const changeClassBackgroundColor = (classs, color) => {
 };
 
 changeClassBackgroundColor('main-content', 'rgb(76,164,109)')
+
+//Exercício 3
+changeClassBackgroundColor('center-content', 'white');

@@ -14,8 +14,8 @@ Aqui você vai modificar os elementos já existentes utilizando apenas as funç�
 
 //Exercício 1
 const changeParagraph = (id = '', text = '') => {
-  const centerParagraph = document.getElementById(id);
-  centerParagraph.innerText = text;
+  const paragraph = document.getElementById(id);
+  paragraph.innerText = text;
 };
 
 changeParagraph('text-mod2', 'Me vejo trabalhando, com uma vida tranquila e feliz');
@@ -50,3 +50,13 @@ const transformIdText = (id, transformation) => {
 };
 
 transformIdText('text-mod1', 'uppercase');
+
+//Exercício 6
+const showTagsContent = (tag) => {
+  const tagsArray = document.getElementsByTagName(tag);
+  for (let objectTag of tagsArray) {
+    console.log(objectTag.innerText);
+  }
+};
+
+showTagsContent('p');

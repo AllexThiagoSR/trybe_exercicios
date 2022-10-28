@@ -32,3 +32,13 @@ changeClassBackgroundColor('main-content', 'rgb(76,164,109)')
 
 //Exercício 3
 changeClassBackgroundColor('center-content', 'white');
+
+//Exercício 4
+const replaceText = (id, text1, text2) => {
+  const element = document.getElementById(id);
+  let tagText = element.innerText;
+  tagText = tagText.replace(text1, text2);
+  element.innerText = tagText;
+};
+
+replaceText('title-head', 'Escripito', 'Script');

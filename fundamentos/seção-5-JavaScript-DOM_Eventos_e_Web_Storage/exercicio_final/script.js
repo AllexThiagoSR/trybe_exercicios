@@ -12,5 +12,20 @@ Aqui você vai modificar os elementos já existentes utilizando apenas as funç�
 6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
 */
 
-const centerParagraph = document.getElementById('text-mod');
-centerParagraph.innerText = 'Me vejo trabalhando, com uma vida tranquila e feliz';
+//Exercício 1
+const changeParagraph = (id='', text='') =>{
+  const centerParagraph = document.getElementById(id);
+  centerParagraph.innerText = text;
+};
+
+changeParagraph('text-mod', 'Me vejo trabalhando, com uma vida tranquila e feliz');
+
+//Exercício 2
+const changeClassBackgroundColor = (classs, color) => {
+  const classElements = document.getElementsByClassName(classs);
+  for(let elem of classElements){
+    elem.style.backgroundColor = color;
+  }
+};
+
+changeClassBackgroundColor('main-content', 'rgb(76,164,109)')

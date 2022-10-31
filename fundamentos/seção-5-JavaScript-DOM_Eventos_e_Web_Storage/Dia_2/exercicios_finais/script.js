@@ -1,5 +1,11 @@
 //Adicionar uma tag h1 como sendo filho do body
-const tagH1 = document.createElement('h1');
-tagH1.innerText = 'Exercício - JavaScript DOM';
-tagH1.id = 'title-in-body';
-document.body.appendChild(tagH1);
+const creatAElement = (tagName, parent, _text='', _id='', _classs='') => {
+  const element = document.createElement(tagName);
+  element.innerText = _text;
+  element.id = _id;
+  element.className = _classs;
+  parent.appendChild(element);
+};
+
+creatAElement('h1', document.body, 'Exercício - JavaScript DOM', id='title-in-body');
+creatAElement('main', document.body, '', '', 'main-content');

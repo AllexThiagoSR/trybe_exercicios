@@ -33,3 +33,6 @@ creatAElement('section', document.getElementsByClassName('main-content')[0], '',
 creatAElement('section', document.getElementsByClassName('main-content')[0], '', '', 'right-content');
 creatAElementWithImage('https://picsum.photos/200', document.getElementsByClassName('left-content')[0], '', 'small-image');
 creatAList('ul', ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'], document.getElementsByClassName('right-content')[0]);
+for (let number = 1; number <= 3; number += 1) {
+  creatAElement('h1', document.getElementsByClassName('main-content')[0], `${number}`);
+}

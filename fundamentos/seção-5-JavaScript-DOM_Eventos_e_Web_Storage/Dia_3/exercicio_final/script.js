@@ -14,7 +14,9 @@ const createDaysOfTheWeek = () => {
 createDaysOfTheWeek();
 
 // Criar o calendário dinamicamente
-const decemberDaysList = [27, 28, 29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+const decemberFridays = [4, 11, 18, 25];
+const decemberHolidays = [24, 25, 31];
 
 const monthDays = (daysList, parent) => {
   for (let day of daysList) {
@@ -25,4 +27,18 @@ const monthDays = (daysList, parent) => {
   }
 };
 
+const addClass = (classNameElement, textOfElement, newClassName) => {
+  const elements = document.getElementsByClassName(classNameElement);
+  for (let element of elements) {
+    for (let text of textOfElement) {
+      if (element.innerText === `${text}` && !element.className.includes(newClassName)){
+        element.classList.add(newClassName);
+        break;
+      }
+    }
+  }
+};
+
 monthDays(decemberDaysList, document.getElementById('days'));
+addClass('day', decemberHolidays, 'holiday');
+addClass('day', decemberFridays, 'friday');

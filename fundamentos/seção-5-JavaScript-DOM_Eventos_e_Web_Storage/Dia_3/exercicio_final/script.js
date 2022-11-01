@@ -13,4 +13,16 @@ const createDaysOfTheWeek = () => {
 
 createDaysOfTheWeek();
 
-// Escreva seu código abaixo.
+// Criar o calendário dinamicamente
+const decemberDaysList = [27, 28, 29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+
+const monthDays = (daysList, parent) => {
+  for (let day of daysList) {
+    const liDay = document.createElement('li')
+    liDay.setAttribute('class', 'day');
+    liDay.innerText = day;
+    parent.appendChild(liDay);
+  }
+};
+
+monthDays(decemberDaysList, document.getElementById('days'));

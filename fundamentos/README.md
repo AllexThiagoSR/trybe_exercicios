@@ -17,3 +17,18 @@ Seção-2.Git & GitHub
     - Comandos git
     - Repositório remoto
     - Boas práticas de git
+
+Seção-3.Introdução a HTML e CSS
+    - HTML
+    - CSS
+    - HTML Semântico
+    - Seletores CSS
+
+Seção-4.Introdução a JavaScript
+    - Primeiros passos
+    - Array 
+    - Loops de repetição
+    - Lógica de programação
+    - Objetos
+    - Funções
+    - Boas práticas ES6

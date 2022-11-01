@@ -1,31 +1,30 @@
-const he_cont = document.getElementById('header-container');
-const emer_cont = document.querySelectorAll('.emergency-tasks div');
-const no_emer = document.querySelectorAll('.no-emergency-tasks div');
-const foo_cont = document.getElementById('footer-container')
+//Header
+const headerCont = document.querySelector('#header-container');
 
-he_cont.style.backgroundColor = '#4DCC35';
+headerCont.style.backgroundColor = '#00B069';
 
-for(let i = 0;i < emer_cont.length; i += 1){
+//Emergency tasks
+const emergencyTasks = document.querySelector('.emergency-tasks');
 
-    //section emergency-tasks
-    let div_h3 = emer_cont[i];
+emergencyTasks.style.backgroundColor = '#FF9F84';
 
-    div_h3.style.backgroundColor = '#FF9F84';
-    div_h3.style.position = 'relative';
-    div_h3.querySelector('h3').style.backgroundColor = '#A500F3';
-    div_h3.querySelector('h3').style.position = 'absolute';
-    div_h3.querySelector('h3').style.right = '0';
-    div_h3.querySelector('h3').style.left = '0';
+const divEmergency = emergencyTasks.querySelectorAll('div h3');
 
-    //section no-emergency-tasks
-    div_h3 = no_emer[i];
-
-    div_h3.style.backgroundColor = '#F9DB5E';
-    div_h3.style.position = 'relative';
-    div_h3.querySelector('h3').style.backgroundColor = '#A500F3';
-    div_h3.querySelector('h3').style.position = 'absolute';
-    div_h3.querySelector('h3').style.right = '0';
-    div_h3.querySelector('h3').style.left = '0';
+for(let h3 of divEmergency){
+  h3.style.backgroundColor = '#A500F3';
 }
 
-foo_cont.style.backgroundColor = '#034422'; 
+//No Emergency tasks
+const noEmergencyTasks = document.querySelector('.no-emergency-tasks');
+
+noEmergencyTasks.style.backgroundColor = '#F9DB5E';
+
+const divNoEmergency = noEmergencyTasks.querySelectorAll('div h3');
+
+for(let h3 of divNoEmergency){
+  h3.style.backgroundColor = 'black';
+}
+
+//Footer
+const footerCont = document.querySelector('#footer-container');
+footerCont.style.backgroundColor = '#003533';

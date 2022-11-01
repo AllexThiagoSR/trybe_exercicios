@@ -1,72 +1,61 @@
 /*
-      Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
-      - document.getElementById()
-      - document.getElementsByClassName()
-      - document.getElementsByTagName()
-      1. Crie e execute uma função que mude o texto na tag `<p>-----</p>`, para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
-      2. Crie e execute uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
-      3. Crie e execute uma função que mude a cor do quadrado vermelho para branco.
-      4. Crie e execute uma função que corrija o texto da tag <h1>.
-      5. Crie e execute uma função que modifique o texto da primeira tag <p> para maiúsculo.
-      6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
-      */
+Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+- document.getElementById()
+- document.getElementsByClassName()
+- document.getElementsByTagName()
+1. Crie e execute uma função que mude o texto na tag `<p>-----</p>`, para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+2. Crie e execute uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+3. Crie e execute uma função que mude a cor do quadrado vermelho para branco.
+4. Crie e execute uma função que corrija o texto da tag <h1>.
+5. Crie e execute uma função que modifique o texto da primeira tag <p> para maiúsculo.
+6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
+*/
 
-function changeTagText(tag, text, yourText){
-  const element = document.getElementsByTagName(tag);
+//Exercício 1
+const changeParagraph = (id = '', text = '') => {
+  const paragraph = document.getElementById(id);
+  paragraph.innerText = text;
+};
 
-  for(let i of element){
-    if(i.innerText === text){
-      i.innerText = yourText;
-    }
+changeParagraph('text-mod2', 'Me vejo trabalhando, com uma vida tranquila e feliz');
+
+//Exercício 2
+const changeClassBackgroundColor = (classs, color) => {
+  const classElements = document.getElementsByClassName(classs);
+  for (let elem of classElements) {
+    elem.style.backgroundColor = color;
   }
-}
+};
 
-function changeBgColor(color, id=null, cssSelector=null){
-  let element;
+changeClassBackgroundColor('main-content', 'rgb(76,164,109)')
 
-  if(id !== null){
-    element = document.getElementById(id);
-    
-  }else if(cssSelector !== null){
-    element = document.querySelector(cssSelector);
-  } else if(id !== null && cssSelector !== null){
-    console.log('Mande apenas um dos argumentos opicionais, id ou ');
-    return null;
-  }else{
-    console.log('Mande um dos argumentos opicionais, id ou clas');
-    return null;
+//Exercício 3
+changeClassBackgroundColor('center-content', 'white');
+
+//Exercício 4
+const replaceText = (id, text1, text2) => {
+  const element = document.getElementById(id);
+  let tagText = element.innerText;
+  tagText = tagText.replace(text1, text2);
+  element.innerText = tagText;
+};
+
+replaceText('title-head', 'Escripito', 'Script');
+
+//Exercício 5
+const transformIdText = (id, transformation) => {
+
+  document.getElementById(id).style.textTransform = transformation;
+};
+
+transformIdText('text-mod1', 'uppercase');
+
+//Exercício 6
+const showTagsContent = (tag) => {
+  const tagsArray = document.getElementsByTagName(tag);
+  for (let objectTag of tagsArray) {
+    console.log(objectTag.innerText);
   }
-  element.style.backgroundColor = color;
-}
+};
 
-function changeToUpper(id=null, cssSelector=null){
-  let element;
-  if(id !== null){
-    element = document.getElementById(id);
-  }else if(cssSelector !== null){
-    element = document.querySelector(cssSelector);
-  } else if(id !== null && cssSelector !== null){
-    console.log('Mande apenas um dos argumentos opicionais, id ou cssSelector');
-    return null;
-  }else{
-    console.log('Mande um dos argumentos opicionais, id ou cssSelector');
-    return null;
-  }
-  element.style.textTransform = 'uppercase';
-}
-
-function showPContent(){
-  let element = document.getElementsByTagName('p');
-
-  for(let i of element){
-    console.log(i.innerText);
-  }
-}
-
-
-changeTagText('p', '-----', 'Me vejo empregado e vivendo bem');
-changeBgColor('rgb(76,164,109)', null, '.main-content');
-changeBgColor('white', null, '.main-content .center-content')
-changeTagText('h1', 'Exercício - JavaEscripito', 'Exercício - JavaScript')
-changeToUpper(null, 'p');
-showPContent();
+showTagsContent('p');

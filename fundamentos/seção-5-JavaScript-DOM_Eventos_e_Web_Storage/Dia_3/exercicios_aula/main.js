@@ -6,10 +6,20 @@ const myWebpage = document.getElementById('my-spotrybefy');
 
 
 // - Copie esse arquivo e edite apenas ele;
-//  - Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
+//  - Note que uma das caixas está um pouco acima das outras. Por que isso ocorre? Porque os elementos da classe tch foram estilizados para ficar desta maneira
 
 // - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 //  - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
+const addClass = (event) => {
+  if (!event.target.className.includes('tech')) {
+    event.target.className += ' tech';
+  } else {
+    event.target.className = '';
+  }
+};
+
+secondLi.addEventListener('click', addClass);
+thirdLi.addEventListener('click', addClass);
 
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';

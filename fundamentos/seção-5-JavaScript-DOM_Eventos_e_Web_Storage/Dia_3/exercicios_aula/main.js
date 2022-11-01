@@ -16,6 +16,7 @@ const addClass = (event) => {
   } else {
     event.target.className = '';
   }
+  showElementToChange();
 };
 
 firstLi.addEventListener('click', addClass);
@@ -36,9 +37,9 @@ const changeText = (event) => {
   }
 };
 
-const showElementToChange = (event) => {
-  const  input = event.target;
-  const element = document.getElementsByClassName('tech')[0];
+const showElementToChange = () => {
+  const  element = document.getElementsByClassName('tech')[0];
+  const input = document.getElementById('input');
   if (typeof element !== 'undefined') {
     input.placeholder = 'Altera texto de ' + element.id;
   } else {
@@ -46,12 +47,16 @@ const showElementToChange = (event) => {
   }
 };
 
-document.getElementById('input').addEventListener('keyup', changeText)
-document.getElementById('input').addEventListener('click', showElementToChange);
+input.addEventListener('keyup', changeText)
 
 // - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 //  - Que tal redirecionar para seu portfólio?
+const redirectToPage = () => {
+  window.open('https://allexthiagosr.github.io/', '_blank');
+};
+
+myWebpage.addEventListener('dblclick', redirectToPage)
 
 // - Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;

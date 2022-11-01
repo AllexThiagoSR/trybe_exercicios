@@ -18,11 +18,36 @@ const addClass = (event) => {
   }
 };
 
+firstLi.addEventListener('click', addClass);
 secondLi.addEventListener('click', addClass);
 thirdLi.addEventListener('click', addClass);
 
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+const changeText = (event) => {
+  const  input = event.target;
+  const element = document.getElementsByClassName('tech')[0];
+
+  if (event.keyCode === 13) {
+    if (element.className.includes('tech')) {
+      element.innerText = input.value;
+      input.value = '';
+    }
+  }
+};
+
+const showElementToChange = (event) => {
+  const  input = event.target;
+  const element = document.getElementsByClassName('tech')[0];
+  if (typeof element !== 'undefined') {
+    input.placeholder = 'Altera texto de ' + element.id;
+  } else {
+    input.placeholder = 'Altera texto do quadrado selecionado por um clique';
+  }
+};
+
+document.getElementById('input').addEventListener('keyup', changeText)
+document.getElementById('input').addEventListener('click', showElementToChange);
 
 // - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
@@ -42,6 +67,9 @@ const resetText = (event) => {
 }
 
 firstLi.addEventListener('dblclick', resetText);
+secondLi.addEventListener('dblclick', resetText);
+thirdLi.addEventListener('dblclick', resetText);
+
 
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o

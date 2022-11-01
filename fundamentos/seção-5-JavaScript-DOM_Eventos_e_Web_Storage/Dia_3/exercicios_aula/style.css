@@ -68,3 +68,7 @@ input:focus {
 .tech {
   transform: translateY(-20px);
 }
+
+h3.my-spotrybefy {
+  width: fit-content;
+}

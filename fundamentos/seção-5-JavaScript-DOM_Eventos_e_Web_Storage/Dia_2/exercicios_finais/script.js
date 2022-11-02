@@ -71,3 +71,8 @@
 const novoElemento = document.createElement('h1');
 novoElemento.innerText = 'Exercício - JavaScript DOM';
 document.body.appendChild(novoElemento);
+
+const mainContent = document.createElement('main');
+mainContent.className = 'main-content';
+
+document.body.appendChild(mainContent)

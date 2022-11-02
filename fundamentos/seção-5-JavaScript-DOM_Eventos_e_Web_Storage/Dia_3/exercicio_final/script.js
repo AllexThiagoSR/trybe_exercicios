@@ -50,6 +50,26 @@ const createButton = (text, parent, id) => {
   button.innerText = text;
   button.id = id;
   parent.appendChild(button);
+  return button
 };
 
-createButton('Feriados', document.querySelector('.buttons-container'), 'btn-holiday');
+const btnHoliday = createButton('Feriados', document.querySelector('.buttons-container'), 'btn-holiday');
+
+// Adiciona event listener ao botão
+const buttonChange = (event) => {
+  const button = event.target;
+  let className = button.id.split('-');
+
+  className = className[className.length - 1];
+  const elementsToChange = document.getElementsByClassName(className);
+  console.log(elementsToChange);
+  for (let element of elementsToChange) {
+    if (element.style.backgroundColor === 'rgb(193, 110, 204)') {
+      element.style.backgroundColor = 'rgb(238,238,238)';
+    } else {
+      element.style.backgroundColor = 'rgb(193, 110, 204)';
+    }
+  }
+};
+
+btnHoliday.addEventListener('click', buttonChange);

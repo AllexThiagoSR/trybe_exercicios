@@ -93,3 +93,34 @@ section.appendChild(paragrafo);
 const sectionLeft = document.createElement('section');
 sectionLeft.className = 'left-content';
 mainContent.appendChild(sectionLeft);
+
+
+const sectionRight = document.createElement('section');
+sectionRight.className = 'right-content';
+
+mainContent.appendChild(sectionRight);
+
+
+const img = document.createElement('img');
+img.src = 'https://picsum.photos/200';
+img.className = 'small-image';
+sectionLeft.appendChild(img);
+
+
+const ul = document.createElement('ul');
+const valoresLi = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+for (let numeroPorExtenso of valoresLi) {
+  // console.log(numeroPorExtenso);
+  const li = document.createElement('li');
+  li.innerText = numeroPorExtenso;
+  ul.appendChild(li);
+}
+sectionRight.appendChild(ul);
+
+
+
+for (let index = 0; index < 3; index += 1) {
+  const h3 = document.createElement('h3');
+  h3.innerHTML = `<strong>${index}</strong>`
+  mainContent.appendChild(h3);
+}

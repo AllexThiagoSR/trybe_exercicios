@@ -23,7 +23,7 @@ const monthDays = (daysList, parent, eventsAndFunctions={}) => {
     const liDay = document.createElement('li')
     liDay.setAttribute('class', 'day');
     liDay.innerText = day;
-    console.log(eventsAndFunctions);
+    liDay.style.backgroundColor = '#eee';
     for (let key in eventsAndFunctions) {
       liDay.addEventListener(key, eventsAndFunctions[key]);
     }
@@ -97,16 +97,33 @@ const changeText = (event) => {
 // Implementar funções de zoom - Parte 6
 const zoomIn = (event) => {
   const element = event.target;
-  element.style.height = '50px';
-  element.style.backgroundColor = 'rgb(206, 206, 206)';
-  element.style.color = 'black';
+  const style = element.style;
+
+  style.height = '50px';
+  console.log(style.backgroundColor);
+  if (style.backgroundColor !== 'rgb(238, 238, 238)') {
+    style.backgroundColor = style.backgroundColor;
+    style.color = style.color;
+  }else {
+    style.backgroundColor = 'rgb(206, 206, 206)';
+    style.color = 'black';
+  }
+  
 };
 
 const zoomOut = (event) => {
   const element = event.target;
-  element.style.height = '23px';
-  element.style.backgroundColor = '#EEEEEE';
-  element.style.color = '#777';
+  const style = element.style;
+
+  style.height = '23px';
+  console.log(element.style.backgroundColor);
+  if (style.backgroundColor !== 'rgb(206, 206, 206)') {
+    style.backgroundColor = style.backgroundColor;
+    style.color = style.color;
+  }else {
+    style.backgroundColor = 'rgb(238, 238, 238)';
+    style.color = '#777';
+  }
 };
 
 // Criar diase adicionar events listeners(mouseover e mouseleave) e classes à esses dias

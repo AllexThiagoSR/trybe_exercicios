@@ -43,33 +43,54 @@ monthDays(decemberDaysList, document.getElementById('days'));
 addClass('day', decemberHolidays, 'holiday');
 addClass('day', decemberFridays, 'friday');
 
-// Criar botões - Parte 2
-const createButton = (text, parent, id) => {
+// Criar botão feriados - Parte 2 e Adiciona event listener ao botão - Parte 3
+const createButton = (text, parent, id, eventFunction) => {
   const button = document.createElement('button');
 
   button.innerText = text;
   button.id = id;
   parent.appendChild(button);
-  return button
+  button.addEventListener('click', eventFunction);
 };
 
-const btnHoliday = createButton('Feriados', document.querySelector('.buttons-container'), 'btn-holiday');
-
-// Adiciona event listener ao botão
-const buttonChange = (event) => {
+const buttonChangeBgColor = (event) => {
   const button = event.target;
   let className = button.id.split('-');
 
   className = className[className.length - 1];
   const elementsToChange = document.getElementsByClassName(className);
-  console.log(elementsToChange);
+
   for (let element of elementsToChange) {
     if (element.style.backgroundColor === 'rgb(193, 110, 204)') {
       element.style.backgroundColor = 'rgb(238,238,238)';
+      element.style.color = '#777';
     } else {
       element.style.backgroundColor = 'rgb(193, 110, 204)';
+      element.style.color = 'black';
+    }
+    // (element.style.backgroundColor === 'rgb(193, 110, 204)') ? element.style.backgroundColor = 'rgb(238,238,238)' : element.style.backgroundColor = 'rgb(193, 110, 204)';
+  }
+};
+
+createButton('Feriados', document.querySelector('.buttons-container'), 'btn-holiday', buttonChangeBgColor);
+
+
+
+// Criar botão sexta-feira - Parte 4 e Adiciona event listener ao botão sexta-feira- Parte 5
+const changeText = (event) => {
+  const button = event.target;
+  let className = button.id.split('-');
+  
+  className = className[className.length - 1];
+  const elementsToChange = document.getElementsByClassName(className)
+
+  for (let index in elementsToChange) {
+    if (elementsToChange[index].innerText !== 'SEXTOU!!!') {
+      elementsToChange[index].innerText = 'SEXTOU!!!';
+    } else {
+      elementsToChange[index].innerText = decemberFridays[index];
     }
   }
 };
 
-btnHoliday.addEventListener('click', buttonChange);
+createButton('Sexta-feira', document.querySelector('.buttons-container'), 'btn-friday', changeText);

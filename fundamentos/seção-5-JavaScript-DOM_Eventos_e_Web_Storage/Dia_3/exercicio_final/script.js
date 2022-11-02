@@ -18,11 +18,15 @@ const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
 const decemberFridays = [4, 11, 18, 25];
 const decemberHolidays = [24, 25, 31];
 
-const monthDays = (daysList, parent) => {
+const monthDays = (daysList, parent, eventsAndFunctions={}) => {
   for (let day of daysList) {
     const liDay = document.createElement('li')
     liDay.setAttribute('class', 'day');
     liDay.innerText = day;
+    console.log(eventsAndFunctions);
+    for (let key in eventsAndFunctions) {
+      liDay.addEventListener(key, eventsAndFunctions[key]);
+    }
     parent.appendChild(liDay);
   }
 };
@@ -38,10 +42,6 @@ const addClass = (classNameElement, textOfElement, newClassName) => {
     }
   }
 };
-
-monthDays(decemberDaysList, document.getElementById('days'));
-addClass('day', decemberHolidays, 'holiday');
-addClass('day', decemberFridays, 'friday');
 
 // Criar botão feriados - Parte 2 e Adiciona event listener ao botão - Parte 3
 const createButton = (text, parent, id, eventFunction) => {
@@ -59,22 +59,21 @@ const buttonChangeBgColor = (event) => {
 
   className = className[className.length - 1];
   const elementsToChange = document.getElementsByClassName(className);
+  let bgColor = elementsToChange[0].style.backgroundColor;
+  let color = elementsToChange[0].style.color;
 
+  if (elementsToChange[0].style.backgroundColor === 'rgb(193, 110, 204)') {
+    bgColor = 'rgb(238,238,238)';
+    color = '#777';
+  } else {
+    bgColor = 'rgb(193, 110, 204)';
+    color = 'black';
+  }
   for (let element of elementsToChange) {
-    if (element.style.backgroundColor === 'rgb(193, 110, 204)') {
-      element.style.backgroundColor = 'rgb(238,238,238)';
-      element.style.color = '#777';
-    } else {
-      element.style.backgroundColor = 'rgb(193, 110, 204)';
-      element.style.color = 'black';
-    }
-    // (element.style.backgroundColor === 'rgb(193, 110, 204)') ? element.style.backgroundColor = 'rgb(238,238,238)' : element.style.backgroundColor = 'rgb(193, 110, 204)';
+    element.style.backgroundColor = bgColor;
+    element.style.color = color;
   }
 };
-
-createButton('Feriados', document.querySelector('.buttons-container'), 'btn-holiday', buttonChangeBgColor);
-
-
 
 // Criar botão sexta-feira - Parte 4 e Adiciona event listener ao botão sexta-feira- Parte 5
 const changeText = (event) => {
@@ -93,4 +92,30 @@ const changeText = (event) => {
   }
 };
 
+
+
+// Implementar funções de zoom - Parte 6
+const zoomIn = (event) => {
+  const element = event.target;
+  element.style.height = '50px';
+  element.style.backgroundColor = 'rgb(206, 206, 206)';
+  element.style.color = 'black';
+};
+
+const zoomOut = (event) => {
+  const element = event.target;
+  element.style.height = '23px';
+  element.style.backgroundColor = '#EEEEEE';
+  element.style.color = '#777';
+};
+
+// Criar diase adicionar events listeners(mouseover e mouseleave) e classes à esses dias
+monthDays(decemberDaysList, document.getElementById('days'), {'mouseover': zoomIn, 'mouseleave': zoomOut});
+addClass('day', decemberHolidays, 'holiday');
+addClass('day', decemberFridays, 'friday');
+
+// Criar botão feriados
+createButton('Feriados', document.querySelector('.buttons-container'), 'btn-holiday', buttonChangeBgColor);
+
+// Criar botão sexta-feira
 createButton('Sexta-feira', document.querySelector('.buttons-container'), 'btn-friday', changeText);

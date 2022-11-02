@@ -72,7 +72,24 @@ const novoElemento = document.createElement('h1');
 novoElemento.innerText = 'Exercício - JavaScript DOM';
 document.body.appendChild(novoElemento);
 
+
 const mainContent = document.createElement('main');
 mainContent.className = 'main-content';
 
-document.body.appendChild(mainContent)
+document.body.appendChild(mainContent);
+
+
+const section = document.createElement('section');
+section.className = 'center-content';
+document.getElementsByClassName('main-content')[0].appendChild(section);
+// mainContent.appendChild(section);
+
+
+const paragrafo = document.createElement('p');
+paragrafo.innerText = 'Texto';
+section.appendChild(paragrafo);
+
+
+const sectionLeft = document.createElement('section');
+sectionLeft.className = 'left-content';
+mainContent.appendChild(sectionLeft);

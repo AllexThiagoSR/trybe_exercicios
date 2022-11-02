@@ -18,9 +18,10 @@ const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
 const decemberFridays = [4, 11, 18, 25];
 const decemberHolidays = [24, 25, 31];
 
+// Função que cria as li's e adciona quantos events listeners forem passados no objeto
 const monthDays = (daysList, parent, eventsAndFunctions={}) => {
   for (let day of daysList) {
-    const liDay = document.createElement('li')
+    const liDay = document.createElement('li');
     liDay.setAttribute('class', 'day');
     liDay.innerText = day;
     liDay.style.backgroundColor = '#eee';
@@ -31,8 +32,10 @@ const monthDays = (daysList, parent, eventsAndFunctions={}) => {
   }
 };
 
+// Função para adicionar uma classe a elemento ou elementos
 const addClass = (classNameElement, textOfElement, newClassName) => {
   const elements = document.getElementsByClassName(classNameElement);
+
   for (let element of elements) {
     for (let text of textOfElement) {
       if (element.innerText === `${text}` && !element.className.includes(newClassName)){
@@ -43,7 +46,7 @@ const addClass = (classNameElement, textOfElement, newClassName) => {
   }
 };
 
-// Criar botão feriados - Parte 2 e Adiciona event listener ao botão - Parte 3
+// Função que cria botões e adiciona um event listener de click a eles
 const createButton = (text, parent, id, eventFunction) => {
   const button = document.createElement('button');
 
@@ -53,6 +56,7 @@ const createButton = (text, parent, id, eventFunction) => {
   button.addEventListener('click', eventFunction);
 };
 
+// Função que do event listener do botão feriados
 const buttonChangeBgColor = (event) => {
   const button = event.target;
   let className = button.id.split('-');
@@ -75,7 +79,7 @@ const buttonChangeBgColor = (event) => {
   }
 };
 
-// Criar botão sexta-feira - Parte 4 e Adiciona event listener ao botão sexta-feira- Parte 5
+// Função do event listener do botão sexta-feira- Parte 5
 const changeText = (event) => {
   const button = event.target;
   let className = button.id.split('-');
@@ -94,7 +98,7 @@ const changeText = (event) => {
 
 
 
-// Implementar funções de zoom - Parte 6
+// Funções de zoom - Parte 6
 const zoomIn = (event) => {
   const element = event.target;
   const style = element.style;
@@ -126,7 +130,7 @@ const zoomOut = (event) => {
   }
 };
 
-// Criar diase adicionar events listeners(mouseover e mouseleave) e classes à esses dias
+// Criar dias e adicionar events listeners(mouseover e mouseleave) e classes à esses dias
 monthDays(decemberDaysList, document.getElementById('days'), {'mouseover': zoomIn, 'mouseleave': zoomOut});
 addClass('day', decemberHolidays, 'holiday');
 addClass('day', decemberFridays, 'friday');

@@ -153,13 +153,13 @@ const createTask = (taskName, subColor, functionToSub) => {
 // Função de event listener de click na legenda das tasks - Parte 9
 const selectTask = (event) => {
   const element = event.target;
-  const elementsWithClass = document.getElementsByClassName('task-selected').length;
+  const elementsWithClass = document.getElementsByClassName('selected').length;
   console.log(elementsWithClass);
 
-  if (!element.className.includes('task-selected') && elementsWithClass === 0) {
-    element.classList.add('task-selected');
+  if (!element.className.includes('selected') && elementsWithClass === 0) {
+    element.classList.add('selected');
   } else {
-    element.classList.remove('task-selected');
+    element.classList.remove('selected');
   }
 };
 

@@ -130,13 +130,25 @@ const zoomOut = (event) => {
   }
 };
 
-// Criar dias e adicionar events listeners(mouseover e mouseleave) e classes à esses dias
+//Função que cria tarefas - Parte 7
+const createTask = (taskName) => {
+  const tasksDiv = document.querySelector('.my-tasks');
+  const span = document.createElement('span');
+  span.innerText = taskName;
+  tasksDiv.appendChild(span);
+};
+
+// Cria dias e adicionar events listeners(mouseover e mouseleave) e classes à esses dias
 monthDays(decemberDaysList, document.getElementById('days'), {'mouseover': zoomIn, 'mouseleave': zoomOut});
 addClass('day', decemberHolidays, 'holiday');
 addClass('day', decemberFridays, 'friday');
 
-// Criar botão feriados
+// Cria botão feriados
 createButton('Feriados', document.querySelector('.buttons-container'), 'btn-holiday', buttonChangeBgColor);
 
-// Criar botão sexta-feira
+// Cria botão sexta-feira
 createButton('Sexta-feira', document.querySelector('.buttons-container'), 'btn-friday', changeText);
+
+//Cria duas tasks, cozinhar e fazer exercícios
+createTask('Cozinhar');
+createTask('Fazer exercícios');

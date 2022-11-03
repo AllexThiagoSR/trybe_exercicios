@@ -130,15 +130,16 @@ const zoomOut = (event) => {
   }
 };
 
-//Função que cria tarefas - Parte 7 / Função que cria legenda para as tasks - Parte 8
-const tasksSubtitle = (color) => {
+// Função que cria tarefas - Parte 7 / Função que cria legenda para as tasks - Parte 8
+const tasksSubtitle = (color, eventFunction) => {
   const subDiv = document.createElement('div');
   subDiv.className = 'task';
   subDiv.style.backgroundColor = color;
+  subDiv.addEventListener('click', eventFunction);
   return subDiv;
 };
 
-const createTask = (taskName, subColor) => {
+const createTask = (taskName, subColor, functionToSub) => {
   const tasksDiv = document.querySelector('.my-tasks');
   const span = document.createElement('span');
   const br = document.createElement('br');
@@ -146,7 +147,20 @@ const createTask = (taskName, subColor) => {
   tasksDiv.appendChild(br);
   span.innerText = taskName;
   tasksDiv.appendChild(span);
-  tasksDiv.appendChild(tasksSubtitle(subColor));
+  tasksDiv.appendChild(tasksSubtitle(subColor, functionToSub));
+};
+
+// Função de event listener de click na legenda das tasks - Parte 9
+const selectTask = (event) => {
+  const element = event.target;
+  const elementsWithClass = document.getElementsByClassName('task-selected').length;
+  console.log(elementsWithClass);
+
+  if (!element.className.includes('task-selected') && elementsWithClass === 0) {
+    element.classList.add('task-selected');
+  } else {
+    element.classList.remove('task-selected');
+  }
 };
 
 // Cria dias e adicionar events listeners(mouseover e mouseleave) e classes à esses dias
@@ -161,5 +175,5 @@ createButton('Feriados', document.querySelector('.buttons-container'), 'btn-holi
 createButton('Sexta-feira', document.querySelector('.buttons-container'), 'btn-friday', changeText);
 
 //Cria duas tasks, cozinhar e fazer exercícios
-createTask('Cozinhar', '#008000');
-createTask('Fazer exercícios', 'yellow');
+createTask('Cozinhar', '#008000', selectTask);
+createTask('Fazer exercícios', 'yellow', selectTask);

@@ -130,12 +130,23 @@ const zoomOut = (event) => {
   }
 };
 
-//Função que cria tarefas - Parte 7
-const createTask = (taskName) => {
+//Função que cria tarefas - Parte 7 / Função que cria legenda para as tasks - Parte 8
+const tasksSubtitle = (color) => {
+  const subDiv = document.createElement('div');
+  subDiv.className = 'task';
+  subDiv.style.backgroundColor = color;
+  return subDiv;
+};
+
+const createTask = (taskName, subColor) => {
   const tasksDiv = document.querySelector('.my-tasks');
   const span = document.createElement('span');
+  const br = document.createElement('br');
+
+  tasksDiv.appendChild(br);
   span.innerText = taskName;
   tasksDiv.appendChild(span);
+  tasksDiv.appendChild(tasksSubtitle(subColor));
 };
 
 // Cria dias e adicionar events listeners(mouseover e mouseleave) e classes à esses dias
@@ -150,5 +161,5 @@ createButton('Feriados', document.querySelector('.buttons-container'), 'btn-holi
 createButton('Sexta-feira', document.querySelector('.buttons-container'), 'btn-friday', changeText);
 
 //Cria duas tasks, cozinhar e fazer exercícios
-createTask('Cozinhar');
-createTask('Fazer exercícios');
+createTask('Cozinhar', '#008000');
+createTask('Fazer exercícios', 'yellow');

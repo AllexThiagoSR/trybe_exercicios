@@ -25,6 +25,7 @@ const monthDays = (daysList, parent, eventsAndFunctions={}) => {
     liDay.setAttribute('class', 'day');
     liDay.innerText = day;
     liDay.style.backgroundColor = '#eee';
+    liDay.style.color = 'rgb(119,119,119)';
     for (let key in eventsAndFunctions) {
       liDay.addEventListener(key, eventsAndFunctions[key]);
     }
@@ -104,13 +105,16 @@ const zoomIn = (event) => {
   const style = element.style;
 
   style.height = '50px';
-  console.log(style.backgroundColor);
   if (style.backgroundColor !== 'rgb(238, 238, 238)') {
     style.backgroundColor = style.backgroundColor;
-    style.color = style.color;
   }else {
     style.backgroundColor = 'rgb(206, 206, 206)';
-    style.color = 'black';
+  }
+  console.log(style.color);
+  if (style.color !== 'rgb(119, 119, 119)'){
+    style.color = style.color;
+  } else {
+    style.color = 'rgb(0, 0, 0)';
   }
   
 };
@@ -120,13 +124,16 @@ const zoomOut = (event) => {
   const style = element.style;
 
   style.height = '23px';
-  console.log(element.style.backgroundColor);
-  if (style.backgroundColor !== 'rgb(206, 206, 206)') {
+  if (style.backgroundColor !== 'rgb(206, 206, 206)' ) {
     style.backgroundColor = style.backgroundColor;
-    style.color = style.color;
   }else {
     style.backgroundColor = 'rgb(238, 238, 238)';
-    style.color = '#777';
+  }
+
+  if (style.color !== 'rgb(0, 0, 0)'){
+    style.color = style.color;
+  } else {
+    style.color = 'rgb(119, 119, 119)';
   }
 };
 
@@ -150,7 +157,7 @@ const createTask = (taskName, subColor, functionToSub) => {
   tasksDiv.appendChild(tasksSubtitle(subColor, functionToSub));
 };
 
-// Função de event listener de click na legenda das tasks - Parte 9
+// Função do event listener de click na legenda das tasks - Parte 9
 const selectTask = (event) => {
   const element = event.target;
   const elementsWithClass = document.getElementsByClassName('selected').length;
@@ -158,13 +165,31 @@ const selectTask = (event) => {
 
   if (!element.className.includes('selected') && elementsWithClass === 0) {
     element.classList.add('selected');
+    element.style.fontSize = '45px';
+    element.innerText = '*';
   } else {
     element.classList.remove('selected');
+    element.innerText = '';
+    element.style.fontSize = '0';
+  }
+};
+
+// Função que muda cor de uma li day se for clicada - Parte 10
+const markTaskDay = (event) => {
+  const day = event.target;
+  const taskSelected = document.getElementsByClassName('selected')[0];
+
+  if (day.style.color !== taskSelected.style.backgroundColor) {
+    day.style.color = taskSelected.style.backgroundColor;
+    day.style.fontWeight = 'bolder';
+  } else {
+    day.style.color = 'rgb(119,119,119)';
+    day.style.fontWeight = 'normal';
   }
 };
 
 // Cria dias e adicionar events listeners(mouseover e mouseleave) e classes à esses dias
-monthDays(decemberDaysList, document.getElementById('days'), {'mouseover': zoomIn, 'mouseleave': zoomOut});
+monthDays(decemberDaysList, document.getElementById('days'), {'mouseover': zoomIn, 'mouseleave': zoomOut, 'click': markTaskDay});
 addClass('day', decemberHolidays, 'holiday');
 addClass('day', decemberFridays, 'friday');
 
@@ -176,4 +201,4 @@ createButton('Sexta-feira', document.querySelector('.buttons-container'), 'btn-f
 
 //Cria duas tasks, cozinhar e fazer exercícios
 createTask('Cozinhar', '#008000', selectTask);
-createTask('Fazer exercícios', 'yellow', selectTask);
+createTask('Fazer exercícios', '#7f0000', selectTask);

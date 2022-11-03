@@ -54,7 +54,7 @@ transformIdText('text-mod1', 'uppercase');
 const showTagsContent = (tag) => {
   const tagsArray = document.getElementsByTagName(tag);
   for (let objectTag of tagsArray) {
-    console.log(objectTag.innerText);
+    console.log(objectTag.innerHTML);
   }
 };
 

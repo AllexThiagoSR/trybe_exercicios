@@ -11,10 +11,12 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 //  - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 const addClass = (event) => {
-  if (!event.target.className.includes('tech')) {
-    event.target.className += ' tech';
+  const quantity = document.getElementsByClassName('tech').length
+
+  if (!event.target.className.includes('tech') && quantity === 0) {
+    event.target.classList.add('tech');
   } else {
-    event.target.className = '';
+    event.target.classList.remove('tech');
   }
   showElementToChange();
 };

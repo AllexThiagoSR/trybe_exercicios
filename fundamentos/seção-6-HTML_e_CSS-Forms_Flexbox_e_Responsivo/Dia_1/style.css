@@ -1,0 +1,12 @@
+#informations {
+  border: 3px solid black;
+  padding: 20px;
+}
+
+#buttons {
+  padding: 20px;
+}
+
+#input-answer {
+  width: 52%;
+}

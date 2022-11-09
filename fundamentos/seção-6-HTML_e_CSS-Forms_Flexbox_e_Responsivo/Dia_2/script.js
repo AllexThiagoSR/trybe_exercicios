@@ -16,9 +16,11 @@ copyRight.addEventListener('click', () => {
   if (copyRight.value === 'on') {
     copyRight.value = 'off';
     copyRight.parentElement.nextElementSibling.insertAdjacentHTML('afterend', `
-    <label for="images" enctype="multipart/form-data">
-    <input type="file" id="images" name="images" required>
-    </label>`);
+    <div>
+    <label for="images" class="form-label" enctype="multipart/form-data">Selecione suas imagens</label>
+    <input type="file" id="images" class="form-control" name="images" required>
+    
+    </div>`);
   } else {
     copyRight.value = 'on';
     copyRight.parentElement.nextElementSibling.nextElementSibling.remove();

@@ -1,0 +1,23 @@
+main > *{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+h1 {
+  text-align: center;
+  padding: 40px;
+}
+
+#informations {
+  border: 3px solid black;
+  padding: 20px;
+}
+
+#buttons {
+  padding: 20px;
+  text-align: center;
+}
+
+#input-answer {
+  width: 80%;
+}

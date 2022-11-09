@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Título</h1>
+  </header>
+  <main>
+    <form method="get">
+      <section id="informations">
+        <label for="input-name">
+          Nome: <input type="text" minlength="10" maxlength="40" id="input-name" name="name" required>
+        </label>
+        <br>
+        <br>
+        <label for="input-email">
+          Email: <input type="email" id="input-email" name="email" minlength="10" maxlength="50" required>
+        </label>
+        <br>
+        <br>
+        <label for="place-1" ><input type="radio" name="destination" id="place-1" value="Cidade" required>Cidade</label>
+        <label for="place-2"><input type="radio" name="destination" id="place-2" value="Campo" required>Campo</label>
+        <label for="place-3"><input type="radio" name="destination" id="place-3" value="Praia" required>Praia</label>
+        <label for="place-4"><input type="radio" name="destination" id="place-4" value="Montanhas" required>Montanhas</label>
+        <br>
+        <br>
+        <label for="input-answer">
+          <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+          <textarea name="answer" id="input-answer" maxlength="500" cols="70" rows="7" required></textarea>
+        </label>
+        <br>
+        <br>
+        <label for="input-date">
+          <p>Qual a melhor data para realizar sua viagem?</p>
+          <input type="date" name="date" id="input-date" required>
+        </label>
+        <br>
+        <br>
+        <label for="new-informations">
+          <span>Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</span>
+          <input type="checkbox" name="more-informations" id="new-informations">
+        </label>
+        <br>
+        <label for="copyright">
+          <span>Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</span>
+          <input type="checkbox" name="copyright" id="copyright">
+        </label>
+        <br/>
+      </section>
+      <section id="buttons">
+        <button type="submit" id="submit-button">Enviar</button>
+        <button type="reset" id="reset-button">Apagar</button>
+      </section>
+    </form>
+    
+  </main>
+</body>
+</html>

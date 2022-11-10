@@ -26,3 +26,5 @@ copyRight.addEventListener('click', () => {
     copyRight.parentElement.nextElementSibling.nextElementSibling.remove();
   }
 });
+
+let date = new Pikaday({field: document.getElementById('input-date'), format: 'DD/MM/YYYY'});

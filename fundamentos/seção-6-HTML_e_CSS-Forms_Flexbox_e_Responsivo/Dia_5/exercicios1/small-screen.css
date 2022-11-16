@@ -32,16 +32,16 @@ img {
 main {
   display: flex;
   flex-direction: column;
-  height: 1200px;
+  height: fit-content;
 }
 
 main section {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-content: space-around;
   justify-content: flex-start;
-  height: 98%;
+  align-items: center;
   width: 100%;
 }
 
@@ -62,7 +62,7 @@ figcaption {
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   body {
     background-color: #67b49b;
     padding: 0 10%;
@@ -75,6 +75,8 @@ figcaption {
 
   main section {
     width: 100%;
+    flex-wrap: wrap;
+    height: 98%;
   }
 
   article {
@@ -105,6 +107,8 @@ figcaption {
 
   main section {
     width: 100%;
+    flex-wrap: nowrap;
+    height: fit-content;
   }
 
   article {

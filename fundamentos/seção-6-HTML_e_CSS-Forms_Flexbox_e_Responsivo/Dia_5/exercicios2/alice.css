@@ -5,3 +5,109 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+body {
+  margin: 0 20px;
+}
+
+p {
+  text-align: justify;
+  font-size: 23px;
+}
+
+h1 {
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul {
+  padding: 0;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style: none;
+}
+
+header p {
+  text-align: center;
+}
+
+.abs {
+  position: absolute;
+  top: 20px;
+  left: -3px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#aside-section {
+  display: none;
+  background-color: white;
+  padding-left: 20px;
+}
+
+#aside-section h2 {
+  width: fit-content;
+}
+
+#aside-section li {
+  font-size: 15px;
+  width: fit-content;
+  margin-left: 5
+  px;
+  margin-bottom: 5px;
+}
+
+.aside-one, .aside-two {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-two {
+  margin-left: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+#button-hide {
+  border: none;
+  background-color: transparent;
+  transform: rotate(90deg);
+  width: 20px;
+  padding: 0;
+  font-size: 10px;
+}
+
+aside ul {
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+/* @media screen and (min-width: 600px) {
+  #button-hide {
+    display: none;
+  }
+
+  #aside-section {
+
+  }
+} */

@@ -1,19 +1,21 @@
 const buttonToHide = document.getElementById('button-hide');
 const abs = document.querySelector('.abs');
 const asideSection = document.getElementById('aside-section');
+const mainContent = document.querySelector('.main-content');
 
 const hide = () => {
-  asideSection.style.setProperty('display', 'none');
-buttonToHide.style.transform = 'rotate(90deg)';
+  asideSection.classList.add('hide');
+  buttonToHide.style.transform = 'rotate(90deg)';;
+  mainContent.style.marginTop = '0';
 };
 
 buttonToHide.addEventListener('click', () => {
   
-  const display = window.getComputedStyle(asideSection).display;
-  if (display === 'flex') {
+  if (!asideSection.className.includes('hide')) {
     hide();
   } else {
-    asideSection.style.setProperty('display', 'flex');
+    asideSection.classList.remove('hide');
     buttonToHide.style.transform = 'rotate(0deg)';
+    mainContent.style.marginTop = '415px';
   }
 });

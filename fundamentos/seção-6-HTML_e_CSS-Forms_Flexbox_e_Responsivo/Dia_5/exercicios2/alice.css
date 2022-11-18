@@ -1,0 +1,162 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 20px;
+}
+
+p {
+  text-align: justify;
+  font-size: 17px;
+}
+
+h1 {
+  font-size: 23px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+ul {
+  padding: 0;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style: none;
+}
+
+header p {
+  text-align: center;
+}
+
+.abs {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#aside-section {
+  background-color: white;
+  padding-left: 20px;
+}
+
+#aside-section h2 {
+  width: fit-content;
+}
+
+#aside-section li {
+  font-size: 15px;
+  width: fit-content;
+  margin-left: 5
+  px;
+  margin-bottom: 5px;
+}
+
+.aside-one, .aside-two {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-two {
+  margin-left: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#button-hide {
+  background-color: transparent;
+  transform: rotate(90deg);
+  width: 20px;
+  padding: 0;
+  font-size: 10px;
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+aside ul {
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 601px) {
+  body {
+    padding: 0 20%;
+  }
+
+  #button-sec, #button-hide {
+    display: none;
+  }
+
+  #aside-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .abs {
+    position: relative;
+    padding: 0;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  #aside-section li {
+    font-size: 20px;
+  }
+
+  header p {
+    font-size: 30px;
+  }
+
+  header li {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 25px
+  }
+}

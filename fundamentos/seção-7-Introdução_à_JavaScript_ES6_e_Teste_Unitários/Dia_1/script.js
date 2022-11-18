@@ -17,9 +17,9 @@ const sum = (value1, value2) => {
 };
 
 function catchSumExceptions() {
+  const value1 = document.getElementById('value1').value;
+  const value2 = document.getElementById('value2').value;
   try {
-    const value1 = document.getElementById('value1').value;
-    const value2 = document.getElementById('value2').value;
     const values = checkValues(value1, value2);
     const result = sum(values[0], values[1]);
     document.getElementById('result').innerHTML = `Resultado: ${result}`;

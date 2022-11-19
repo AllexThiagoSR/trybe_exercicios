@@ -97,7 +97,7 @@ const verifyPair = (object, key, value) => {
     const enter = [key, value];
     const entries = [];
     
-    Object.entries(object).forEach(entri => entries.push(entri.toString()));
+    Object.entries(object).forEach(entri => {entries.push(entri.toString())});
     return entries.includes(enter.toString());
   } catch (error) {
     console.log(error.message);

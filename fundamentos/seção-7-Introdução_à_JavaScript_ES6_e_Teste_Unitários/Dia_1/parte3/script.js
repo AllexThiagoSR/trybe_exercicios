@@ -18,6 +18,13 @@ const lesson3 = {
   turno: 'noite',
 };
 
+const eachKey = (object) => {
+  const keys = Object.keys(object);
+  for (let index of keys) {
+    console.log(index);
+  }
+};
+
 const addProperty = (object, key, value) => {
   object[key] = value;
 };
@@ -25,3 +32,5 @@ const addProperty = (object, key, value) => {
 addProperty(lesson2, 'turno', 'noite');
 
 console.log(lesson2);
+
+eachKey(lesson1);

@@ -25,17 +25,32 @@ const checkObject = (object) => {
   throw new Error('O parâmetro deve ser um objeto');
 };
 
+const checkObjectValues = (object) => {
+  if (typeof object === 'object') {
+    return Object.values(object);
+  }
+  throw new Error('O parâmetro deve ser um objeto');
+};
+
 const eachKey = (object) => {
-  const keys = Object.keys(object);
-  for (let index of keys) {
-    console.log(index);
+  try {
+    const keys = checkObject(object);
+    for (let index of keys) {
+      console.log(index);
+    }
+  } catch (error) {
+    console.log(error.message);
   }
 };
 
 const eachValue = (object) => {
-  const values = Object.values(object);
-  for (const value of values) {
-    console.log(value);
+  try {
+    const values =checkObjectValues(object);
+    for (const value of values) {
+      console.log(value);
+    }
+  } catch (error) {
+    console.log(error.message);
   }
 };
 
@@ -60,13 +75,6 @@ const estudantsNumber = (object) => {
   }
 };
 
-const checkObjectValues = (object) => {
-  if (typeof object === 'object') {
-    return Object.values(object);
-  }
-  throw new Error('O parâmetro deve ser um objeto');
-};
-
 const checkNumber = (number) => {
   if (typeof number === 'number') {
     return number;
@@ -78,6 +86,19 @@ const getValueByNumber = (object, index) => {
   try {
     const values = checkObjectValues(object);
     return values[checkNumber(index)];
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+const verifyPair = (object, key, value) => {
+  try {
+    checkObject(object);
+    const enter = [key, value];
+    const entries = [];
+    
+    Object.entries(object).forEach(entri => entries.push(entri.toString()));
+    return entries.includes(enter.toString());
   } catch (error) {
     console.log(error.message);
   }
@@ -103,4 +124,9 @@ const allLessons = Object.assign({}, {lesson1, lesson2, lesson3}); // Desse modo
 
 // console.log(estudantsNumber(allLessons));
 
-console.log(getValueByNumber(lesson1, 1));
+// console.log(getValueByNumber(lesson1, 1));
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+// Output: true,
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// Output: falseconsole.log(verifyPair(lesson3, 'turno', 'noite'));

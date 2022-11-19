@@ -25,6 +25,10 @@ const eachKey = (object) => {
   }
 };
 
+const objectLength = (object) => {
+  return Object.keys(object).length;
+};
+
 const addProperty = (object, key, value) => {
   object[key] = value;
 };
@@ -34,3 +38,5 @@ addProperty(lesson2, 'turno', 'noite');
 console.log(lesson2);
 
 eachKey(lesson1);
+
+console.log(objectLength(lesson1));

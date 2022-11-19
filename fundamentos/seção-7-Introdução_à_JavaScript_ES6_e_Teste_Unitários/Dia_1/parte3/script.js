@@ -18,6 +18,13 @@ const lesson3 = {
   turno: 'noite',
 };
 
+const checkObject = (object) => {
+  if (typeof object === 'object') {
+    return Object.keys(object);
+  }
+  throw new Error('O parâmetro deve ser um objeto');
+};
+
 const eachKey = (object) => {
   const keys = Object.keys(object);
   for (let index of keys) {
@@ -41,13 +48,39 @@ const addProperty = (object, key, value) => {
 };
 
 const estudantsNumber = (object) => {
-  const keys = Object.keys(object);
-  let total = 0;
-
-  for (const key of keys) {
-    total += object[key].numeroEstudantes;
+  try {
+    const keys = checkObject(object);
+    let total = 0;
+    for (const key of keys) {
+      total += object[key].numeroEstudantes;
+    }
+    return total;
+  } catch (error) {
+    console.log(error.message);
   }
-  return total;
+};
+
+const checkObjectValues = (object) => {
+  if (typeof object === 'object') {
+    return Object.values(object);
+  }
+  throw new Error('O parâmetro deve ser um objeto');
+};
+
+const checkNumber = (number) => {
+  if (typeof number === 'number') {
+    return number;
+  }
+  throw new Error('Esse parâmetro deve ser numérico');
+};
+
+const getValueByNumber = (object, index) => {
+  try {
+    const values = checkObjectValues(object);
+    return values[checkNumber(index)];
+  } catch (error) {
+    console.log(error.message);
+  }
 };
 
 addProperty(lesson2, 'turno', 'noite');
@@ -66,6 +99,8 @@ const allLessons = Object.assign({}, {lesson1, lesson2, lesson3}); // Desse modo
 // const bejeto = { a: 1, b: 2, c:3, variavel}; // Se eu não pôr do jeito convêncional chave: valor, e o o que eu desejo inserir for uma variável ou constante declarada antes isso é considerado uma entrada inteira de chave: valor, a chave será o nome da variável ou constante e o valor será o valor que atribui a ela
 // console.log(bejeto);
 
-console.log(allLessons);
+// console.log(allLessons);
 
-console.log(estudantsNumber(allLessons));
+// console.log(estudantsNumber(allLessons));
+
+console.log(getValueByNumber(lesson1, 1));

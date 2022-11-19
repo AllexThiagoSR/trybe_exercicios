@@ -40,6 +40,16 @@ const addProperty = (object, key, value) => {
   object[key] = value;
 };
 
+const estudantsNumber = (object) => {
+  const keys = Object.keys(object);
+  let total = 0;
+
+  for (const key of keys) {
+    total += object[key].numeroEstudantes;
+  }
+  return total;
+};
+
 addProperty(lesson2, 'turno', 'noite');
 
 // console.log(lesson2);
@@ -57,3 +67,5 @@ const allLessons = Object.assign({}, {lesson1, lesson2, lesson3}); // Desse modo
 // console.log(bejeto);
 
 console.log(allLessons);
+
+console.log(estudantsNumber(allLessons));

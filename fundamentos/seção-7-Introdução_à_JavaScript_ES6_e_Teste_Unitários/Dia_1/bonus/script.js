@@ -64,6 +64,42 @@ const quantity = (object, lesson) => {
   }
 };
 
+const returnClassroom = (object, teacher) => {
+  const classRoom = [];
+  Object.values(object).forEach((ob) => {
+    if (ob.professor === teacher) classRoom.push(ob.materia);
+  });
+  return classRoom;
+};
+
+const studentsByTeacher = (object, teacher) => {
+  const students = [];
+  Object.values(object).forEach((ob) => {
+    if (ob.professor === teacher) students.push(ob.numeroEstudantes); 
+  });
+  return sum(students);
+};
+
+const teacherReport = (object, teacher) => {
+  try {
+    checkObject(object);
+    const classRoom = returnClassroom(object, teacher);
+    const students = studentsByTeacher(object, teacher);
+    const report = {
+      teacher,
+      classRoom,
+      students,
+    };
+    
+
+    return report;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
 const allLessons = Object.assign({}, {lesson1, lesson2, lesson3}); // Desse modo o objeto que esta sendo criado assim {objeto1, objeto2, objeto3}, é criado automaticamente uma chave com o mesmo nome da constante ou variável que guarda o objeto, isso funciona para todos os tipos de primitivos.
 
 console.log(quantity(allLessons, 'Matemática'));
+
+console.log(teacherReport(1, 'Maria Clara'));

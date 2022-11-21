@@ -17,15 +17,23 @@ describe('Testes da função exercicio 1', () => {
 });
 
 describe('Testes da função do exercício 2', () => {
-  it('Testa se for passado um número divisível por 5 e por 3 retorna "fizzbuzz"', () => {
+  it('Teste: Se for passado um número divisível por 5 e por 3 retorna "fizzbuzz"', () => {
     expect(myFizzBuzz(15)).toBe('fizzbuzz');
   });
 
-  it('Testa se for passado um valor divisível apenas por 3 retorna "fizz"', () => {
+  it('Teste: Se for passado um valor divisível apenas por 3 retorna "fizz"', () => {
     expect(myFizzBuzz(6)).toBe('fizz');
   });
 
-  it('Testa se for passado um valor divisível apenas por 5 o retorno é "buzz"', () => {
+  it('Teste: Se for passado um valor divisível apenas por 5 o retorno é "buzz"', () => {
     expect(myFizzBuzz(25)).toBe('buzz');
+  });
+
+  it('Teste: Se for passado um valor que não é divisível por 3 e nem por 5 retorna o próprio número', () => {
+    expect(myFizzBuzz(2)).toBe(2);
+  });
+
+  it('Teste: Se for passado um valor não númerico retorna false', () =>{
+    expect(myFizzBuzz('aa')).toBe(false);
   });
 });

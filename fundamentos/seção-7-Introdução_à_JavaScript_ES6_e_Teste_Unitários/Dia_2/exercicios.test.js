@@ -24,4 +24,8 @@ describe('Testes da função do exercício 2', () => {
   it('Testa se for passado um valor divisível apenas por 3 retorna "fizz"', () => {
     expect(myFizzBuzz(6)).toBe('fizz');
   });
+
+  it('Testa se for passado um valor divisível apenas por 5 o retorno é "buzz"', () => {
+    expect(myFizzBuzz(25)).toBe('buzz');
+  });
 });

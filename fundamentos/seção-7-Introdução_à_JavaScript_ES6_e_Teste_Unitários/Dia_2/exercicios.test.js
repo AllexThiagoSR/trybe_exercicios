@@ -41,7 +41,7 @@ describe('Testes da função do exercício 2', () => {
 describe('Testes de encode função do exercício 3', () => {
   const letters = ['a', 'e',  'i', 'o', 'u'];
   const numbers = [1, 2, 3, 4 ,5];
-  const phrase = 'A trybe e da hora e estou aprendendo bastante, indo para o futuro';;
+  const phrase = 'A trybe e da hora e estou aprendendo bastante, indo para o futuro';
 
   it('Teste: Se existe a função encode', () => {
     expect(typeof encode).toBe('function');
@@ -58,6 +58,10 @@ describe('Testes de encode função do exercício 3', () => {
     });
   }
 
+  it('Teste: Se as demais letras não são substituidas', () => {
+    expect(encode(phrase)).toBe('A tryb2 2 d1 h4r1 2 2st45 1pr2nd2nd4 b1st1nt2, 3nd4 p1r1 4 f5t5r4');
+  });
+
   it('Teste: Se a string retornada tem o mesmo tamanho da string passada como parâmetro', () => {
     expect(encode(phrase).length).toBe(phrase.length);
   });
@@ -66,16 +70,14 @@ describe('Testes de encode função do exercício 3', () => {
 describe('Tetes da função decode do exercicio 3', () => {
   const letters = ['a', 'e',  'i', 'o', 'u'];
   const numbers = [1, 2, 3, 4 ,5];
-  const phrase = 'A tryb2 2 d1 h4r1 2 2st45 1pr2nd2nd4 b1st1nt2, 3nd4 p1r1 4 f5t5r4';
+  const phrase = 'A tryb2 2 d1 h4r1 2 2st45 1pr2nd2nd4 b1st1nt2, 3nd4 p1r1 4 f5t5r4 é 10';
 
-  console.log(decode(phrase));
-  console.log(phrase);
   it('Teste: Se existe a função decode', () => {
     expect(typeof decode).toBe('function');
   });
 
   for (let index = 0; index < letters.length; index += 1) {
-    it(`Teste: Se a vogal "${letters[index]}" é convertida para ${numbers[index]}`, () => {
+    it(`Teste: Se o número "${numbers[index]}" é convertido para "${letters[index]}"`, () => {
       const regexNum = new RegExp(`${numbers[index]}`, 'g');
       const regexLet = new RegExp(`${letters[index]}`, 'g')
       const numMatches = phrase.match(regexNum);
@@ -84,6 +86,10 @@ describe('Tetes da função decode do exercicio 3', () => {
       expect(numMatches.length).toBe(vowelMatches.length);
     });
   }
+
+  it('Teste: Se os demais números não são substituidos', () => {
+    expect(decode(phrase)).toBe('A trybe e da hora e estou aprendendo bastante, indo para o futuro é a0');
+  });
 
   it('Teste: Se a string retornada tem o mesmo tamanho da string passada como parâmetro', () => {
     expect(decode(phrase).length).toBe(phrase.length);

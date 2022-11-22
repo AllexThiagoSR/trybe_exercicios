@@ -41,7 +41,7 @@ describe('Testes da função do exercício 2', () => {
 describe('Testes de encode função do exercício 3', () => {
   const letters = ['a', 'e',  'i', 'o', 'u'];
   const numbers = [1, 2, 3, 4 ,5];
-  const phrase = 'A trybe é da hora';;
+  const phrase = 'A trybe é da hora e estou aprendendo bastante, indo para o futuro';;
 
   it('Teste: Se existe a função encode', () => {
     expect(typeof encode).toBe('function');
@@ -49,14 +49,13 @@ describe('Testes de encode função do exercício 3', () => {
 
   for (let index = 0; index < letters.length; index += 1) {
     it(`Teste: Se a vogal "${letters[index]}" é convertida para ${numbers[index]}`, () => {
-      const regexLet = new RegExp(`/${letters[index]}/`, 'g');
-      const regexNum = new RegExp(`/${numbers[index]}/`, 'g');
+      const regexNum = new RegExp(`${numbers[index]}`, 'g');
+      const regexLet = new RegExp(`${letters[index]}`, 'g')
+      const numMatches = encode(phrase).match(regexNum);
       const vowelMatches = phrase.match(regexLet);
-      if (vowelMatches !== null) {
-        expect(encode(phrase).match(regexNum).length).toBe(vowelMatches.length);
-      } else {
-        expect(0).toBe(0);
-      }
+
+      console.log(regexLet, regexNum);
+      /*if (numMatches !== )*/ expect(numMatches.length).toBe(vowelMatches.length);
     });
   }
 
@@ -64,3 +63,21 @@ describe('Testes de encode função do exercício 3', () => {
     expect(encode(phrase).length).toBe(phrase.length);
   });
 });
+
+// describe('Tetes da função decode do exercicio 3', () => {
+//   const phrase = 'A tryb2 2 d1 h4r1 2 2st45 1pr2nd2ndo b1st1nt2, 3nd4 p1r1 4 f5t5r4';
+
+//   // console.log(decode(phrase));
+//   // console.log(phrase);
+//   it('Teste: Se existe a função decode', () => {
+//     expect(typeof decode).toBe('function');
+//   });
+
+//   it(`Teste: Se a vogal "${numbers[index]}" é convertida para ${letters[index]}`, () => {
+//     expect(vowelMatches.length).toBe(phrase.match(regexNum).length);
+//   });
+
+//   it('Teste: Se a string retornada tem o mesmo tamanho da string passada como parâmetro', () => {
+//     expect(decode(phrase).length).toBe(phrase.length);
+//   });
+// });

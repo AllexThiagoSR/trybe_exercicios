@@ -59,4 +59,8 @@ describe('Testes de encode função do exercício 3', () => {
       }
     });
   }
+
+  it('Teste: Se a string retornada tem o mesmo tamanho da string passada como parâmetro', () => {
+    expect(encode(phrase).length).toBe(phrase.length);
+  });
 });

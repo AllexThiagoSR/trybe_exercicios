@@ -45,6 +45,7 @@ const searchEmployee = (professionalBoard, id, detail) => {
       return professionalBoard[index][detail];
     }
   }
+  throw new Error('ID não identificada');
 };
 // searchEmployee(professionalBoard, '5569-4', 'lastName');
 module.exports = {professionalBoard, searchEmployee};

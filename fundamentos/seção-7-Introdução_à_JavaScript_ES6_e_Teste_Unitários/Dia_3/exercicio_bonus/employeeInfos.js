@@ -39,8 +39,14 @@ const professionalBoard = [
 ];
 
 // Pesquisa
+
+const isObject = (object) => {
+  if (typeof object !== 'object') throw new Error('Esse array não é inteiramente de objetos');
+};
+
 const searchEmployee = (professionalBoard, id, detail) => {
   for (let index = 0; index < professionalBoard.length; index += 1) {
+    isObject(professionalBoard[index]);
     if (professionalBoard[index].id === id) {
       if (professionalBoard[index][detail] === undefined) throw new Error('Informação indisponível');
       return professionalBoard[index][detail];

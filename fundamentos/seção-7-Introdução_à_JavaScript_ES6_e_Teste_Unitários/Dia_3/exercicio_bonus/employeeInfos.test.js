@@ -35,5 +35,9 @@ describe('Testes da função', () => {
       expect(() => {searchEmployee(professionalBoard, '5569-4', 'age')}).toThrow();
       expect(() => {searchEmployee(professionalBoard, '4456-4', 'age')}).toThrow('Informação indisponível');
     });
+    it('Teste: Se não for passado um array de objetos retorna um erro', () => {
+      expect(() => {searchEmployee(['33'], '5569-4', 'firstName');}).toThrow();
+      expect(() => {searchEmployee(['33'], '5569-4', 'firstName');}).toThrow('Esse array não é inteiramente de objetos');
+    });
   });
 });

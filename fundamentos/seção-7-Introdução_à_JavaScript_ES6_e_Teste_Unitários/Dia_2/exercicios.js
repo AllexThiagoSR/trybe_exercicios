@@ -71,4 +71,27 @@ const techList = (techList, name) => {
   return list;
 };
 
-module.exports = {myFizzBuzz, myRemove, encode, decode, techList};
+const sum = (nums) => {
+  let total = 0;
+
+  for (const num of nums) {
+    total += num;    
+  }
+  return total;
+};
+
+const hydrate = (drinksInfo) => {
+  const drinksNums = [];
+
+  if (typeof drinksInfo !== 'string') throw new Error('As informações sobre os drinks consumidos devem estar em uma string');
+  if (!drinksInfo) throw new Error('Informações inválidas');
+  drinksInfo.match(/[1-9]/gi).forEach((drink) => {
+    drinksNums.push(Number(drink));
+  });
+  const total = sum(drinksNums);
+  
+  if (total === 1) return '1 copo de água';
+  if (total > 1) return `${total} copos de água`;
+};
+// hydrate('1 cachaça, 5 cervejas e 1 copo de vinho');
+module.exports = {myFizzBuzz, myRemove, encode, decode, techList, hydrate};

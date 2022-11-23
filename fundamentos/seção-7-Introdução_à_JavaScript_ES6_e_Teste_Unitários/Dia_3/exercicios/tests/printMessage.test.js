@@ -13,4 +13,13 @@ describe('Testes da função printMessage', () => {
   it('Teste: Se o retorno contém o nome do personagem que está no objeto', () => {
     expect(printMessage(info)).toMatch(info.personagem);
   });
+  it('Teste: Se retorna um erro ao passar um objeto inválido', () => {
+    expect(() => {printMessage('sdasdasd')}).toThrow('objeto inválido');
+  });
+  it('Teste: Se retorna um erro ao passar um objeto inválido', () => {
+    expect(() => {printMessage({
+      origem: 'Pato Donald',
+      nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+    })}).toThrow('objeto inválido');
+  });
 });

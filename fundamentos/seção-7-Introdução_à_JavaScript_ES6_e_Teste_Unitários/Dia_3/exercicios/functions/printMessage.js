@@ -6,6 +6,7 @@ let info = {
 };
 
 const printMessage = (characterInfo) => {
+  if (typeof characterInfo !== 'object' || characterInfo.personagem === undefined) throw new Error('objeto inválido');
   return ('Boas vindas, ' + characterInfo.personagem);
 };
 

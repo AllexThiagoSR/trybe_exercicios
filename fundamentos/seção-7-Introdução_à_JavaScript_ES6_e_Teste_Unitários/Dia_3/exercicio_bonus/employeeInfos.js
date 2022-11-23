@@ -44,7 +44,13 @@ const isObject = (object) => {
   if (typeof object !== 'object') throw new Error('Esse array não é inteiramente de objetos');
 };
 
+const isString = (value) => {
+  if (typeof value !== 'string') throw new Error('Não é uma string');
+};
+
 const searchEmployee = (professionalBoard, id, detail) => {
+  isString(id);
+  isString(detail);
   for (let index = 0; index < professionalBoard.length; index += 1) {
     isObject(professionalBoard[index]);
     if (professionalBoard[index].id === id) {

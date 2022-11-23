@@ -39,5 +39,11 @@ describe('Testes da função', () => {
       expect(() => {searchEmployee(['33'], '5569-4', 'firstName');}).toThrow();
       expect(() => {searchEmployee(['33'], '5569-4', 'firstName');}).toThrow('Esse array não é inteiramente de objetos');
     });
+    it('Teste: Se ao passar um dos parãmetros id ou detail com o tipo diferente de string retorna um erro', () => {
+      expect(() => {searchEmployee(professionalBoard, 12345, 'firstName');}).toThrow();
+      expect(() => {searchEmployee(professionalBoard, 12345, 'firstName');}).toThrow('Não é uma string');
+      expect(() => {searchEmployee(professionalBoard, '4456-4');}).toThrow();
+      expect(() => {searchEmployee(professionalBoard, '4456-4');}).toThrow('Não é uma string');
+    });
   });
 });

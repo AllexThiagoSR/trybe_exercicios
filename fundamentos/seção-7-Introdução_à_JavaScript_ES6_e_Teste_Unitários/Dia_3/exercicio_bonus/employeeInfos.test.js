@@ -31,6 +31,9 @@ describe('Testes da função', () => {
       expect(() => {searchEmployee(professionalBoard, '1425-2', 'specialities');}).toThrow();
       expect(() => {searchEmployee(professionalBoard, '14251-2', 'specialities');}).toThrow('ID não identifica');
     });
-    // it('Teste: Se for passada a informação age para o parâmetro detail deve retornar o erro "Informação indisponível"');
+    it('Teste: Se for passada a informação age para o parâmetro detail deve retornar o erro "Informação indisponível"', () => {
+      expect(() => {searchEmployee(professionalBoard, '5569-4', 'age')}).toThrow();
+      expect(() => {searchEmployee(professionalBoard, '4456-4', 'age')}).toThrow('Informação indisponível');
+    });
   });
 });

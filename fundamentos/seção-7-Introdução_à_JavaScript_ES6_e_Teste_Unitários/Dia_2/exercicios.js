@@ -54,4 +54,21 @@ const decode = (string) => {
   return mapString(map, string);
 };
 
-module.exports = {myFizzBuzz, myRemove, encode, decode};
+const techList = (techList, name) => {
+  const list = [];
+
+  if (techList.length === 0 || !name) {
+    return 'Vazio!';
+  } else if (typeof name !== 'string') {
+    throw new Error('O nome deve ser uma string');
+  }
+  for (const tech of techList.sort()) {
+    list.push({
+      tech,
+      name,
+    });
+  }
+  return list;
+};
+
+module.exports = {myFizzBuzz, myRemove, encode, decode, techList};

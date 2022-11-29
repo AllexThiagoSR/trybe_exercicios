@@ -65,7 +65,7 @@ const books = [
 
 const authorBornIn1947 = (books) => {
   const authorFound = books.find((book) => book.author.birthYear === 1947).author.name;
-  console.log(authorFound);
+  return authorFound;
 }
 
 const smallerName = (books) => {
@@ -76,5 +76,8 @@ const smallerName = (books) => {
   return nameBook;
 }
 
+const getNamedBook = (books) => books.find((book) => book.name.length === 26);
+
 console.log(authorBornIn1947(books));
 console.log(smallerName(books));
+console.log(getNamedBook(books));

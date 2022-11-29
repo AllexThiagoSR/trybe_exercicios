@@ -68,6 +68,7 @@ const authorBornIn1947 = (books) => {
   return authorFound;
 }
 
+
 const smallerName = (books) => {
   let nameBook;
   books.forEach((book) => {
@@ -94,8 +95,8 @@ function authorUnique(books) {
   books.forEach((book) => {
     const booleanResult = books.some((book1) => {
       const sameBirthYear = (book.author.birthYear === book1.author.birthYear);
-      const sameName = book.author.name === book1.author.name;
-      return sameBirthYear && !sameName;
+      const sameName = book.author.name !== book1.author.name;
+      return sameBirthYear && sameName;
     });
 
     if (booleanResult) anyBirthYearEqual = true;
@@ -109,4 +110,5 @@ function authorUnique(books) {
 // console.log(getNamedBook(books));
 // console.log(everyoneWasBornOnSecXX(books));
 // console.log(someBookWasReleaseOnThe80s(books));
-console.log(authorUnique(books));
+// console.log(authorUnique(books));
+// Desenvolver os teste para essas funções

@@ -83,7 +83,13 @@ const everyoneWasBornOnSecXX = (books) => books.every((book) => {
   return yearOfBirth > 1900 && yearOfBirth <= 2000;
 });
 
+const someBookWasReleaseOnThe80s = (books) => books.some((book) => {
+  const releaseYear = book.releaseYear;
+  return releaseYear < 1990 && releaseYear >= 1980;
+});
+
 // console.log(authorBornIn1947(books));
 // console.log(smallerName(books));
 // console.log(getNamedBook(books));
-console.log(everyoneWasBornOnSecXX(books));
+// console.log(everyoneWasBornOnSecXX(books));
+console.log(someBookWasReleaseOnThe80s(books));

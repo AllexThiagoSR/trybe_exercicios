@@ -7,3 +7,9 @@ const expectedResult = [
   'Stephen King - 1947',
   'H. P. Lovecraft - 1890',
 ];
+
+const formatedAuthorNamesBirth = (books) => {
+  return books.map((book) => `${book.author.name} - ${book.author.birthYear}`);
+}
+
+module.exports = formatedAuthorNamesBirth;

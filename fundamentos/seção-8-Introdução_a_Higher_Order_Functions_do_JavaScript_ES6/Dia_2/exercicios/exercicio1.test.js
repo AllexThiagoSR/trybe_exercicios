@@ -9,9 +9,13 @@ const expectedResult = [
   'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
 ];
 
+it.todo('Testa se a função existe');
+
 it('Testa o retorno da função formatedBookName', () => {
   expect(formatedBookNames(books)).toEqual(expectedResult);
   expect(formatedBookNames(books)).not.toEqual([]);
   expect(formatedBookNames()).toEqual([]);
   expect(formatedBookNames([])).toEqual([]);
 });
+
+it.todo('Testa se são lançados erros (implementar o lançamento de erros)');

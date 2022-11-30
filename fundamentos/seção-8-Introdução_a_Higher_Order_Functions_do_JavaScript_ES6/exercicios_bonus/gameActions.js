@@ -1,12 +1,10 @@
 const physicalDamage = (minDamage, maxDamage) => {
   const damage = Math.floor(Math.random() * maxDamage + minDamage);
-  if (damage < minDamage) return minDamage;
   return damage;
 };
 
 const magicalDamage = (minDamage, maxDamage) => {
   const damage = Math.floor(Math.random() * maxDamage + minDamage);
-  if (damage < minDamage) return minDamage;
   return damage;
 };
 
@@ -14,28 +12,59 @@ const mage = {
   healthPoints: 130,
   intelligence: 45,
   mana: 125,
-  damage: undefined,
 };
 
 const warrior = {
   healthPoints: 200,
   strength: 30,
   weaponDmg: 2,
-  damage: undefined,
 };
 
 const dragon = {
   healthPoints: 350,
   strength: 50,
-  damage: undefined,
 };
 
 const battleMembers = { mage, warrior, dragon };
 
-warrior.damage = () => physicalDamage(warrior.strength, warrior.strength * warrior.weaponDmg);
-dragon.damage = () => physicalDamage(15, dragon.strength);
+warrior.damage = () => ({ damageDealt: physicalDamage(warrior.strength, warrior.strength * warrior.weaponDmg) });
+dragon.damage = () => ({ damageDealt: physicalDamage(15, dragon.strength) });
 mage.damage = () => {
   if (mage.mana < 15) return 'Mana insuficiente';
   mage.mana -= 15;
-  return { damage: magicalDamage(mage.intelligence, mage.intelligence * 2), spentMana: 15 };
+  return { damageDealt: magicalDamage(mage.intelligence, mage.intelligence * 2), spentMana: 15 };
 };
+
+const turnCharacter = (damageFunction, ...enemies) => {
+  const damageInfos = damageFunction();
+  enemies.forEach((enemy) => {
+    enemy.healthPoints -= damageInfos.damageDealt;
+  });
+  return damageInfos;
+};
+
+const turn = (actions) => {
+  const damagesInfos = {};
+  Object.keys(battleMembers).forEach((member) => {
+    if (member !== 'turnResult') damagesInfos[member] = actions[member + 'Time']();
+  });
+  return damagesInfos;
+};
+
+const turnResult = (battleMembers, damages) => {
+  Object.keys(battleMembers).forEach((member) => {
+    console.log('\nPersonagem: ', member);
+    console.log('Pontos de vida: ', battleMembers[member].healthPoints);
+    console.log('Informações do dano: ', damages[member]);
+  });
+};
+
+const gameActions = {
+  warriorTime: () => turnCharacter(warrior.damage, dragon),
+  mageTime: () => turnCharacter(mage.damage, dragon),
+  dragonTime: () => turnCharacter(dragon.damage, mage, warrior),
+  turnResult,
+};
+
+// gameActions.turnResult();
+gameActions.turnResult(battleMembers, turn(gameActions));

@@ -9,13 +9,30 @@ const expectedResult = [
   'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
 ];
 
-it.todo('Testa se a função existe');
-
-it('Testa o retorno da função formatedBookName', () => {
-  expect(formatedBookNames(books)).toEqual(expectedResult);
-  expect(formatedBookNames(books)).not.toEqual([]);
-  expect(formatedBookNames()).toEqual([]);
-  expect(formatedBookNames([])).toEqual([]);
+it('Testa se a função existe', () => {
+  expect(typeof formatedBookNames).toBe('function');
+  expect(formatedBookNames).toBeInstanceOf(Function);
 });
 
-it.todo('Testa se são lançados erros (implementar o lançamento de erros)');
+describe('Testa o retorno da função formatedBookName', () => {
+  it('Teste: Se quando são passados parâmetros válidos retorno esperado', () => {
+    expect(formatedBookNames(books)).toEqual(expectedResult);
+  });
+  it('Teste: Se quando são passados parâmetros válidos retorno esperado', () => {
+    expect(formatedBookNames(books)).not.toEqual([]);
+  });
+});
+
+describe('Testa se são lançados erros (implementar o lançamento de erros)', () => {
+  it('Teste: Se lança o erro correto quando não é passado parâmetro nenhum', () => {
+    expect(() => formatedBookNames()).toThrow('O parâmetro passado está vazio');
+  });
+
+  it('Teste: Se lança o erro correto quando é passado um parâmetro inválido', () => {
+    expect(() => formatedBookNames(1)).toThrow('O parâmetro deve ser um array');
+  });
+
+  it('Teste: Se lança o erro correto quando é passado um parâmetro inválido', () => {
+    expect(() => formatedBookNames([1])).toThrow('Os valores do array devem ser um objetos');
+  });
+});

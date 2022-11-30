@@ -43,10 +43,10 @@ const turnCharacter = (damageFunction, ...enemies) => {
   return damageInfos;
 };
 
-const turn = (actions) => {
+const battleTurn = (actions, members) => {
   const damagesInfos = {};
-  Object.keys(battleMembers).forEach((member) => {
-    if (member !== 'turnResult') damagesInfos[member] = actions[member + 'Time']();
+  Object.keys(members).forEach((member) => {
+    damagesInfos[member] = actions[member + 'Time']();
   });
   return damagesInfos;
 };
@@ -66,4 +66,4 @@ const gameActions = {
   turnResult,
 };
 
-gameActions.turnResult(battleMembers, turn(gameActions));
+gameActions.turnResult(battleMembers, battleTurn(gameActions, battleMembers));

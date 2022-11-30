@@ -66,5 +66,4 @@ const gameActions = {
   turnResult,
 };
 
-// gameActions.turnResult();
 gameActions.turnResult(battleMembers, turn(gameActions));

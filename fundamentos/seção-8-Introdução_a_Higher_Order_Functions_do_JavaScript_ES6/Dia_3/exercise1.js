@@ -46,7 +46,6 @@ const checkGenre = (first, second) => first === second;
 // };
 
 // Utilizadno HOF - filter
-
 const fantasyOrScienceFiction = (books) => books.
 filter((book) => (checkGenre(book.genre, 'Fantasia') || checkGenre(book.genre, 'Ficção Científica')));
 

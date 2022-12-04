@@ -1,10 +1,12 @@
 const physicalDamage = (minDamage, maxDamage) => {
-  const damage = Math.floor(Math.random() * maxDamage + minDamage);
+  const damage = Math.ceil(Math.random() * maxDamage);
+  if (damage < minDamage) return minDamage;
   return damage;
 };
 
 const magicalDamage = (minDamage, maxDamage) => {
-  const damage = Math.floor(Math.random() * maxDamage + minDamage);
+  const damage = Math.ceil(Math.random() * maxDamage);
+  if (damage < minDamage) return minDamage;
   return damage;
 };
 

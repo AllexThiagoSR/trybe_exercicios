@@ -10,3 +10,5 @@ const verifyAges = (arr, minAge) => arr.every((element) => element.age >= minAge
 
 console.log(verifyAges(people, 18));
 console.log(verifyAges(people, 14));
+
+module.exports = { people, verifyAges };

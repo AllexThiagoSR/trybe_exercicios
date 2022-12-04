@@ -6,9 +6,10 @@ const people = [
   { name: 'Bruna', age: 19 },
 ];
 
-const verifyAges = (arr, minAge) => arr.every((element) => element.age >= minAge);
+const verifyAges = (arr, minAge) => (!arr || !minAge) ? false : arr.every((element) => element.age >= minAge);
 
 console.log(verifyAges(people, 18));
 console.log(verifyAges(people, 14));
+console.log(verifyAges());
 
 module.exports = { people, verifyAges };

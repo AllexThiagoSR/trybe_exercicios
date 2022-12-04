@@ -13,6 +13,6 @@ const finalPontuation = (rigthAnswers, studentAnswers) => {
   return totalPontuation;
 };
 
-console.log(finalPontuation(RIGHT_ANSWERS, STUDENT_ANSWERS));
+// console.log(finalPontuation(RIGHT_ANSWERS, STUDENT_ANSWERS));
 
 module.exports = { RIGHT_ANSWERS, finalPontuation };

@@ -90,18 +90,14 @@ const someBookWasReleaseOnThe80s = (books) => books.some((book) => {
 });
 
 function authorUnique(books) {
-  let anyBirthYearEqual = false;
-
+  let anyBirthYearEqual;
   books.forEach((book) => {
-    const booleanResult = books.some((book1) => {
+    anyBirthYearEqual = books.some((book1) => {
       const sameBirthYear = (book.author.birthYear === book1.author.birthYear);
       const sameName = book.author.name !== book1.author.name;
       return sameBirthYear && sameName;
     });
-
-    if (booleanResult) anyBirthYearEqual = true;
   });
-  
   return !anyBirthYearEqual;
 }
 

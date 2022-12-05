@@ -23,7 +23,7 @@ describe('Testa o retorno da função formatedBookName', () => {
   });
 });
 
-describe('Testa se são lançados erros (implementar o lançamento de erros)', () => {
+describe('Testa se são lançados erros', () => {
   it('Teste: Se lança o erro correto quando não é passado parâmetro nenhum', () => {
     expect(() => formatedBookNames()).toThrow('O parâmetro passado está vazio');
   });

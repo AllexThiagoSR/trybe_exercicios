@@ -1,15 +1,11 @@
 const books = require('./list');
-const expectedResult = [
-  'George R. R. Martin - 1948',
-  'J. R. R. Tolkien - 1892',
-  'Isaac Asimov - 1920',
-  'Frank Herbert - 1920',
-  'Stephen King - 1947',
-  'H. P. Lovecraft - 1890',
-];
 
 const formatedAuthorNamesBirth = (books) => {
-  return books.map((book) => `${book.author.name} - ${book.author.birthYear}`);
-}
+  if (!Array.isArray(books)) throw new Error('O tipo da varíavel deve ser array');
+  return books.map((book) => {
+    if (typeof book !== 'object' && !Array.isArray(book)) throw new Error('Algum dos valores do array não é um objeto');
+    return `${book.author.name} - ${book.author.birthYear}`;
+  });
+};
 
 module.exports = formatedAuthorNamesBirth;

@@ -40,7 +40,7 @@ const expectedResult = [
 // };
 
 // // Utilizando filter - duas funções
-const oldBooks = (books) => books.filter((book) => 2022 - book.releaseYear > 60);
+const oldBooks = (books) => books.filter((book) => new Date().getFullYear() - book.releaseYear > 60);
 
 const oldBooksOrdered = (books) => oldBooks(books).sort((book1, book2) => book1.releaseYear - book2.releaseYear);
 

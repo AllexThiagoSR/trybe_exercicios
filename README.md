@@ -69,12 +69,30 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 8.5: _JavaScript ES6 - spread operator, perâmetro rest, destructuting e mais_
 - [x] 8.6: _Projeto - Zoo functions_
 
-##Front-end
+## Front-end
 
-#####Bloco 1. Introdução ao Frontend e JavaScript assíncrono
+##### Bloco 1. Introdução ao Frontend e JavaScript assíncrono
 
 - [ ] 1.1: _Ambiente de desenvolvimento_
 - [ ] 1.2: _JavaScript Assíncrono - Promises e fetch_
 - [ ] 1.3: _Prática - Casa de câmbio_
 - [ ] 1.4: _Async, await e testes assíncronos_
 - [ ] 1.5: _Projeto - Carrinho de compras_
+
+##### Bloco 2. Introdução ao React
+
+##### Bloco 3. Componentes com Estado, Eventos e Formulários com React
+
+##### Bloco 4. Ciclo de Vida de Componentes e React Router
+
+##### Bloco 5. Metodologias Ágeis
+
+##### Bloco 6. Testes automatizados com React Testing Library
+
+##### Bloco 7. Gerenciamento de estado com Redux
+
+##### Bloco 8. Projeto jogo de Trivia
+
+##### Bloco 9. Context API e React Hooks
+
+##### Bloco 10. Projeto App de Receitas

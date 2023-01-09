@@ -130,3 +130,5 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 9.4: _Projeto - StarWars Datable com Context API e Hooks_
 
 ##### Bloco 10. Projeto App de Receitas
+
+- [ ] 10.1: _Projeto - App de Receitas_

@@ -67,4 +67,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 8-3: _JavaScript ES6 - Higher Order Functions - map e filter_
 - [x] 8-4: _JavaScript ES6 - Higher Order Functions - reduce_
 - [x] 8-5: _JavaScript ES6 - spread operator, perâmetro rest, destructuting e mais_
-- [ ] 8-6: _Projeto - Zoo functions_
+- [x] 8-6: _Projeto - Zoo functions_
+
+##Front-end
+
+#####Bloco 1. Introdução ao Frontend e JavaScript assíncrono
+
+- [ ] 1.1: _Ambiente de desenvolvimento_
+- [ ] 1.2: _JavaScript Assíncrono - Promises e fetch_
+- [ ] 1.3: _Prática - Casa de câmbio_
+- [ ] 1.4: _Async, await e testes assíncronos_
+- [ ] 1.5: _Projeto - Carrinho de compras_

@@ -120,6 +120,8 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 8. Projeto jogo de Trivia
 
+- [ ] 8.1: _Projeto - Jogo de Trivia_
+
 ##### Bloco 9. Context API e React Hooks
 
 ##### Bloco 10. Projeto App de Receitas

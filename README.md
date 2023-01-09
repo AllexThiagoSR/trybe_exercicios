@@ -15,7 +15,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 2. Git & GitHub
 
-- [x] 2.1: _Git - O que é e para que serve?_
+- [x] 2.1: _Git - O que é e para que serve_
 - [x] 2.2: _Git & GitHub - Entendendo os comandos_
 
 ##### Bloco 3. Introdução á HTML & CSS
@@ -33,7 +33,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 4.3: _JavaScript - Lógica de Programação e Algoritmos_
 - [x] 4.4: _JavaScript - Objetos e funções_
 - [x] 4.5: _JavaScript ES6 - let, const, arrow functons e template literals_
-- [x] 4.6: _Projeto - Playgorunsd Functions_
+- [x] 4.6: _Projeto - Playground Functions_
 
 ##### Bloco 5. JavaScript: DOM, Eventos e Web Storage
 
@@ -42,7 +42,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5.3: _JavaScript - Eventos_
 - [x] 5.4: _JavaScript - Web Storage_
 - [x] 5.5: _Projeto - Arte com Pixels_
-- [x] 5.6: _Projeto bônus_
+- [x] 5.6: _Projetos bônus_
 
 ##### Bloco 6. HTML e CSS: Froms, Flexbox e Responsivo
 
@@ -55,18 +55,18 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 7. Introdução à JavaScript ES6 e Teste Unitários
 
-- [x] 7.1: _JavaScript ES6 - let, const, arrow functions e template literals_
-- [x] 7.2: _JavaScript ES6 - Fluxo de exceção e Objetos_
-- [x] 7.3: _Primeiros passos em Jest_
+- [x] 7.1: _Fluxo de exceções e manipulação de objetos_
+- [x] 7.2: _Primeiros passos em Jest_
+- [x] 7.3: _Matchers e cobertura de código_
 - [x] 7.4: _Projeto - JavaScript Testes Unitários_
 
 ##### Bloco 8. Higher Order Functions do JavaScript ES6
 
-- [x] 8.1: _JavaScript ES6 - Introdução a Higher Order Functions_
-- [x] 8.2: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
-- [x] 8.3: _JavaScript ES6 - Higher Order Functions - map e filter_
-- [x] 8.4: _JavaScript ES6 - Higher Order Functions - reduce_
-- [x] 8.5: _JavaScript ES6 - spread operator, perâmetro rest, destructuting e mais_
+- [x] 8.1: _Introdução a Higher Order Functions_
+- [x] 8.2: _Higher Order Functions - sort e map_
+- [x] 8.3: _JavaScript ES6 - Higher Order Functions - filter e reduce_
+- [x] 8.4: _JavaScript ES6 - spread operator, rest parameters e object destructuting_
+- [x] 8.5: _JavaScript ES6 - Array destructuring, Default destructuring, Object property shorthand e default parameters_
 - [x] 8.6: _Projeto - Zoo functions_
 
 ## Front-end

@@ -1,10 +1,4 @@
-import {
-  isEmail,
-  isURL,
-  isDate,
-  isHexColor,
-  isTaxID,
-} from 'validator';
+import { isEmail, isURL, isDate, isHexColor, isTaxID } from 'validator';
 import './style.css';
 
 const verifies = {

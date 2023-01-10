@@ -5,6 +5,7 @@ import {
   isHexColor,
   isTaxID,
 } from 'validator';
+import './style.css';
 
 const verifies = {
   url: (str) => isURL(str),

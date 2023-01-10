@@ -21,7 +21,9 @@ const h2 = document.querySelector('h2');
 
 verifyBtn.addEventListener('click', (event) => {
   event.preventDefault();
-  const textToVerify = input.value;
+  const textToVeri = input.value;
   const veriType = select.value;
-  h2.innerText = `A validação retornou ${verifies[veriType](textToVerify)} para ${select.selectedOptions[0].innerText}`;
+  const strType = select.selectedOptions[0].innerText;
+  h2
+    .innerText = `A validação retornou ${verifies[veriType](textToVeri)} para ${strType}`;
 });

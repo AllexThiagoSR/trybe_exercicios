@@ -1,3 +1,8 @@
+* {
+  background-color: #232325;
+  color: whitesmoke;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -17,8 +22,21 @@ main {
 }
 
 form {
-  height: 80px;
+  height: 120px;
   margin: 10px;
+  
+}
+
+form * {
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form *:hover{
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 h1 {

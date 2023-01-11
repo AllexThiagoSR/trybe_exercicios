@@ -5,7 +5,7 @@ export function fillUsersSelect(users) {
   const usersSelect = document.querySelector('#users-select');
 
   // Faz uma iteração entre todos os itens do array
-  users.map((user) => {
+  users.forEach((user) => {
     // Cria um novo elemento do tipo option
     const opt = document.createElement('option');
     // Define o atributo value com o valor do id da pessoa

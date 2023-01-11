@@ -36,7 +36,7 @@ export function fillPosts(posts) {
   const internalPostsArray = [...posts];
 
   // Define o primeiro post como post destacado e remove ele da lista de posts
-  const firstPost = internalPostsArray.pop();
+  const firstPost = internalPostsArray.shift();
 
   // Adiciona o título e o corpo do post destacado
   featuredPostTitle.innerText = firstPost.title;

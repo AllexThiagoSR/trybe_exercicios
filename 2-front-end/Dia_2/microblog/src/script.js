@@ -10,9 +10,19 @@ import {
 
 const usersSelect = document.querySelector('#users-select');
 
-const getPosts = (id, func) => {
+const addComments = (id) => {
+  fetch(`https://dummyjson.com/posts/${id}/comments`).then((response) => response.json()).then(({ comments }) => {
+    console.log(comments);
+    console.log(id);
+    fillFeaturedPostComments(comments);
+  });
+};
+
+const addPosts = (id) => {
   fetch(`https://dummyjson.com/posts/user/${id}`).then((response) => response.json()).then(({ posts }) => {
-    func(posts);
+    console.log(posts);
+    fillPosts(posts);
+    addComments(posts[0].id);
   });
 };
 
@@ -25,5 +35,5 @@ fetch(USERS_API).then((response) => response.json()).then(({ users }) => {
 
 usersSelect.addEventListener('change', (event) => {
   clearPageData();
-  getPosts(event.target.value, fillPosts);
+  addPosts(event.target.value);
 });

@@ -20,3 +20,8 @@ h2 {
 header {
   margin: 20px 0;
 }
+
+#btn-sec {
+  display: flex;
+  justify-content: center;
+}

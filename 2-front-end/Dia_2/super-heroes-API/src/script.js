@@ -1,9 +1,19 @@
 import './style.css';
-import { clearInfo, getHeroes, getRandomNumber as random } from './utilitities';
+import {
+  clearInfo,
+  getHeroes,
+  getRandomNumber as random,
+  creatImgDiv,
+  addHeroName,
+} from './utilitities';
 
 const getBtn = document.getElementById('get-hero');
 
 getBtn.addEventListener('click', () => {
   clearInfo();
-  getHeroes().then((data) => console.log(data[random(data.length)]));
+  getHeroes().then((data) => {
+    const hero = data[random(data.length)];
+    creatImgDiv(hero);
+    addHeroName(hero);
+  });
 });

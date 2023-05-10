@@ -38,8 +38,8 @@ const bmiCalculator = (weight, height) => {
   ];
 
   const category = categoryRanges.reduce((choosedCategory, { min, max, category }) => {
-    if (min === 0) return bmi >= min ? category : choosedCategory;
-    if (max === 0) return bmi <= max ? category : choosedCategory;
+    if (max === 0) return bmi >= min ? category : choosedCategory;
+    if (min === 0) return bmi <= max ? category : choosedCategory;
     if (min <= bmi && bmi <= max) return category;
     return choosedCategory;
   }, '');
